@@ -1,0 +1,101 @@
+.cardFundo {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background-color: var(--ion-color-secondary);
+  
+  }
+
+
+.decoracao{
+    position: absolute;
+    width: 100vw;
+    height: 450px;
+    left: 0px;
+    top: 0px;
+    
+}
+
+.pergunta{
+    position: absolute;
+width: 248px;
+height: 184px;
+left: 21px;
+top: 235px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 43px;
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
+}
+
+.botaoum {
+    position: absolute;
+width: 183px;
+height: 38px;
+left: 89px;
+top: 502px;
+
+background: var(--ion-color-primary-tint);
+box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.53);
+border-radius: 10px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0.095em;
+
+color: #3F3D56;
+
+}
+
+.botaodois{
+position: absolute;
+width: 183px;
+height: 38px;
+left: 89px;
+top: 420px;
+
+background: var(--ion-color-primary-tint);
+box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.53);
+border-radius: 10px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0.095em;
+
+color: #3F3D56;
+
+
+
+}
+
+
+.jatenho{
+
+    position: absolute;
+width: 127px;
+height: 17px;
+left: 121px;
+top: 590px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 19px;
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
+}

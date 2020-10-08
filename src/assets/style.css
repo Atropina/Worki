@@ -1,0 +1,53 @@
+.fonte-1 {
+    font-family: Hind Madurai;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.17em;
+}
+.fonte-2 {
+    font-family: Hind Madurai;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.06em;
+}
+.fonte-3 {
+    font-family: Hind Madurai;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+}
+.fonte-4 {
+    font-family: Hind Madurai;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 120%;
+    line-height: 25px;
+    text-align: center;
+}
+.branco {
+    color: #ffffff;
+}
+.grafite {
+    color: #2f2f2f;
+}
+.background-senac {
+    background: linear-gradient(
+            202.09deg,
+            #ff961c 1.27%,
+            rgba(255, 168, 66, 0.833333) 16.89%,
+            rgba(255, 255, 255, 0) 91.17%
+        ),
+        #004c94;
+    background-blend-mode: hard-light, normal;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+}
