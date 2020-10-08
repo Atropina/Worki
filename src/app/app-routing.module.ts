@@ -35,6 +35,26 @@ const routes: Routes = [
     path: 'question',
     loadChildren: () => import('./question/question.module').then( m => m.QuestionPageModule)
   },
+  {
+    path: 'primeiropasso',
+    loadChildren: () => import('./primeiropasso/primeiropasso.module').then( m => m.PrimeiropassoPageModule)
+  },
+  {
+    path: 'segundopasso',
+    loadChildren: () => import('./segundopasso/segundopasso.module').then( m => m.SegundopassoPageModule)
+  },
+  {
+    path: 'terceiropasso',
+    loadChildren: () => import('./terceiropasso/terceiropasso.module').then( m => m.TerceiropassoPageModule)
+  },
+  {
+    path: 'quartopasso',
+    loadChildren: () => import('./quartopasso/quartopasso.module').then( m => m.QuartopassoPageModule)
+  },
+  {
+    path: 'quintopasso',
+    loadChildren: () => import('./quintopasso/quintopasso.module').then( m => m.QuintopassoPageModule)
+  },
 
  
 ];
