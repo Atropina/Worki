@@ -36,7 +36,7 @@ color: #FFFFFF;
 }
 
 .seuemail{
-
+    background: transparent !important; 
     position: absolute;
     width: 188px;
    
@@ -47,10 +47,65 @@ color: #FFFFFF;
 }
 
 .suasenha{
+    background: transparent !important; 
     position: absolute;
 width: 188px;
 left: 28px;
 top: 407px;
 
+
+}
+
+.entrar{
+    position: absolute;
+width: 248px;
+height: 73px;
+left: 228px;
+top: 467px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: bold;
+font-size: 30px;
+line-height: 43px;
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
+}
+
+.esqueci {
+    
+position: absolute;
+width: 144px;
+height: 17px;
+left: 32px;
+top: 569px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 19px;
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
+
+}
+
+.empresa{
+    position: absolute;
+width: 143px;
+height: 17px;
+left: 198px;
+top: 569px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 19px;
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
 
 }

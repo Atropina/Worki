@@ -1,0 +1,51 @@
+.cardFundo{
+    position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: var(--ion-color-secondary);
+
+}
+
+
+.avatar{
+    position: absolute;
+width: 52px;
+height: 53px;
+left: 14px;
+top: 30px;
+}
+
+.avatarnome{
+    position: absolute;
+width: 106px;
+height: 35px;
+left: 79px;
+top: 48px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0.015em;
+
+}
+
+.homenome{
+    position: absolute;
+width: 45px;
+height: 26px;
+left: 72px;
+top: 134px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height */
+
+letter-spacing: 0.015em;
+}

@@ -55,6 +55,14 @@ const routes: Routes = [
     path: 'quintopasso',
     loadChildren: () => import('./quintopasso/quintopasso.module').then( m => m.QuintopassoPageModule)
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'vagasculinaria',
+    loadChildren: () => import('./vagasculinaria/vagasculinaria.module').then( m => m.VagasculinariaPageModule)
+  },
 
  
 ];
