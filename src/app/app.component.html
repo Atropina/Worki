@@ -9,10 +9,11 @@
         <ion-list id="inbox-list">
           <ion-avatar>
             
-             <img class="avatar" src="../../assets/img/administracao.png" alt="">
+             <img class="avatar" src="../../assets/img/profile.png" alt="">
              <ion-label class="avatarnome">Núbia Knoll</ion-label>
           </ion-avatar>
-          
+          <br>
+          <br>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" (click)="debug()" routerDirection="root" [routerLink]="[p.url]"

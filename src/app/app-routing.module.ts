@@ -63,6 +63,10 @@ const routes: Routes = [
     path: 'vagasculinaria',
     loadChildren: () => import('./vagasculinaria/vagasculinaria.module').then( m => m.VagasculinariaPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
 
  
 ];

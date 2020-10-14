@@ -1,0 +1,107 @@
+.cardFundo{
+    position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  background-color: var(--ion-color-secondary);
+
+}
+
+
+.olanome{
+    position: absolute;
+    width: 136px;
+    height: 35px;
+    left: 37px;
+    top: 40px;
+    
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 35px;
+    /* identical to box height */
+    
+    letter-spacing: 0.015em;
+    
+    color: #FFFFFF;
+    
+
+}
+
+.vagas{
+    position: absolute;
+width: 131px;
+height: 26px;
+left: 18px;
+top: 107px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height */
+
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
+
+}
+
+.vagaculinaria{
+    position: absolute;
+    width: 314px;
+    height: 77px;
+    left: 20px;
+    top: 152px;;
+
+}
+
+.vagaimgculinaria{
+    position: absolute;
+    width: 80px;
+    height: 75px;
+    left: 6px;
+    top: 3px;
+}
+
+
+.card-titlevaga{
+    position: absolute;
+width: 70px;
+height: 17px;
+left: 90px;
+top: 3px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 17px;
+letter-spacing: 0.015em;
+
+color: #3F3D56;
+
+
+}
+
+.subtitulo{
+    position: absolute;
+width: 135px;
+height: 16px;
+left: 90px;
+top: 25px;
+
+font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 5px;
+/* identical to box height */
+
+letter-spacing: 0.015em;
+
+color: #3F3D56;
+}

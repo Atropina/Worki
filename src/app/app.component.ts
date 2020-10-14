@@ -17,9 +17,17 @@ darkMode: any;
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
-      icon: 'mail'
+      url: '/inicio',
+      icon: 'home',
+    },
+
+    {
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'contact'
     }
+
+
   ];
 
 
