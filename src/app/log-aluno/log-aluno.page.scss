@@ -36,7 +36,7 @@ color: #FFFFFF;
 }
 
 .seuemail{
-    background: transparent !important; 
+    --ion-background-color: transparent;
     position: absolute;
     width: 188px;
    
@@ -47,7 +47,7 @@ color: #FFFFFF;
 }
 
 .suasenha{
-    background: transparent !important; 
+    --ion-background-color: transparent;
     position: absolute;
 width: 188px;
 left: 28px;
@@ -107,5 +107,30 @@ line-height: 19px;
 letter-spacing: 0.015em;
 
 color: #FFFFFF;
+
+}
+
+.email{
+    font-family: Noto Sans TC;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0.015em;
+
+color: #FFFFFF;
+
+}
+
+.senha{
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.015em;
+    
+    color: #FFFFFF;
+    
 
 }
