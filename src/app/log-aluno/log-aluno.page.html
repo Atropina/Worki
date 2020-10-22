@@ -5,16 +5,16 @@
   <ion-card class="seuemail">
   <ion-item >
     <ion-label class="email" position="floating">E-mail</ion-label>
-    <ion-input></ion-input>
+    <ion-input #email></ion-input>
   </ion-item>
 </ion-card>
 <ion-card class="suasenha">
   <ion-item >
-    <ion-label class="senha" position="floating">Senha</ion-label>
-    <ion-input></ion-input>
+    <ion-label class="senha"   position="floating">Senha</ion-label>
+    <ion-input #password></ion-input>
   </ion-item>
 </ion-card>
-<h1 class="entrar" [routerLink]="['/inicio']">Entrar</h1>
+<h1 class="entrar" type="submit"  (click)="logIn(email, password)" >Entrar</h1>
 <h1 class="esqueci" [routerLink]="['/esquecisenha']">Esqueci minha senha</h1>
 <h1 class="empresa" [routerLink]="['/log-empresa']">Entrar como empresa</h1>
 

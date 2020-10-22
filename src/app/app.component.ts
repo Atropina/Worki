@@ -3,6 +3,11 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +36,7 @@ darkMode: any;
   ];
 
 
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  
   
   ref: any;
   constructor(
@@ -44,13 +49,6 @@ darkMode: any;
   }
 
   ngOnInit() {
-    
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(
-        page => page.title.toLowerCase() === path.toLowerCase()
-      );
-    }
 
     const osDarkness = window.matchMedia('(prefers-color-scheme: dark)');
     // check the initial state
