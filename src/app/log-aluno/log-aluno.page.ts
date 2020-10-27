@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { auth } from 'firebase';
+import { Router } from '@angular/router'
 import {AuthService} from '../shared/auth.service'
+import { AlertController  } from '@ionic/angular'
 @Component({
   selector: 'app-log-aluno',
   templateUrl: './log-aluno.page.html',
@@ -8,16 +10,51 @@ import {AuthService} from '../shared/auth.service'
 })
 export class LogAlunoPage implements OnInit {
 
-  constructor( private auth : AuthService) { }
+  constructor( private auth : AuthService, private router : Router, private alert : AlertController) { }
 
   ngOnInit() {
   }
 
-  logIn(email, password){
+    logIn(email, password){
     this.auth.SignIn(email.value, password.value).then( (res)=>{
-      console.log(res)
-    }).catch( (err) =>{
-      console.log(err)
+      
+    }).catch( async (err) =>{
+      let msg:string;
+     
+
+      switch (err.code) {
+        case "auth/invalid-email":
+          msg = "E-mail incorreto. 😩"
+        
+        break;
+        case "auth/user-not-found":
+          msg = "E-mail não cadastrado em nosso banco de dados. 😶"
+
+        break;
+        case "auth/wrong-password":
+          msg = "Senha incorreta. 🤨"
+      
+        default:
+          msg = "Erro ao fazer o Login.🤔"
+          break;
+        }
+        const alertError = await this.alert.create({
+          header: "Erro",
+          message: msg,
+          buttons: [
+            {
+              text: "Ok",
+              role: 'cancel',
+              cssClass: 'secondary'
+            }
+          ]
+
+        })
+        await alertError.present()
+     
+
+
+
     })
   }
 }

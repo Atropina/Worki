@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../shared/auth.service'
 
 @Component({
   selector: 'app-perfil',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
-
-  constructor() { }
+  emailUser:string;
+  constructor( private authService: AuthService) { }
 
   ngOnInit() {
+    this.emailUser = this.authService.emailUser;
+    console.log(this.emailUser)
   }
 
 }

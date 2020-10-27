@@ -7,6 +7,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {AuthService} from '../app/shared/auth.service'
+import { Router} from "@angular/router"
 import '../environments/environment';
 
 @Component({
@@ -42,7 +44,9 @@ darkMode: any;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private auth : AuthService,
+    private router : Router
   ) {
 
     this.initializeApp();
@@ -74,7 +78,7 @@ darkMode: any;
 
   toggleDarkness() {
     // this.darkMode = !this.darkMode;
-    console.log('oiii')
+  
     console.log(this.darkMode)
     if (this.darkMode) {
       document.body.classList.toggle('dark', true);
@@ -93,6 +97,16 @@ darkMode: any;
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  logOut(){
+    this.auth.SignOut().then( () =>{
+      console.log("ok")
+      this.router.navigate(['home'])
+
+    }).catch( (err) =>{
+      console.log(err)
+    })
   }
 
 }

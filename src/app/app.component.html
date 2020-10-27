@@ -40,6 +40,21 @@
           </ion-item>
 
         </ion-list>
+
+        <ion-list>
+          <ion-menu-toggle auto-hide='false'>
+            <ion-item lines='none'>
+              <ion-button (click)="logOut()">
+                <ion-icon slot="start" slot="icon-only" name="log-out"></ion-icon>
+                <ion-label>
+                  Sair
+                </ion-label>
+              </ion-button>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
