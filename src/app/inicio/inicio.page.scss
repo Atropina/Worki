@@ -275,3 +275,17 @@ left: 18px;
 top: 554px;
 
 }
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    }
+
+    .item{
+
+        --background: transparent;
+        --ion-color-base: transparent !important;
+        margin-top: 0.8rem;
+        margin-left: -1rem;
+        
+    }

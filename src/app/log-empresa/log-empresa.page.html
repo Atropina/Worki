@@ -1,26 +1,21 @@
-<ion-content class="content-meu" scroll-y='false'>
-  <div class="card">
-    <img class="icone" src="../../assets/img/icon5.png" alt="">
-  </div>
-
-  <div class="mainCard">
-    <h2 class="fonte txtLogAluno">
-      Login <br>
-      Empresa
-    </h2>
-
-    <ion-item  mode='ios' class="fonte" color="transparent" class="floating-lbl">
-      <ion-label position="floating">Login</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-    <ion-item  mode='ios' class="fonte" color="transparent" class="floating-lbl">
-      <ion-label position="floating">Senha</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-
-    <button class="btnEntrar fonte-5" > Entrar</button>
-
-    <p  class="fonte-5 esqueciSenha" href=""> <a href="">Esqueci minha senha</a>  :(</p>
-    
-  </div>
+<ion-content>
+  
+  <div class="cardFundo"> </div>
+  <img class="decoracao" src="../../assets/img/decoracao.png" alt="">
+  <h1 class="olaaluno">Olá, empresa!</h1>
+  <ion-card class="seuemail">
+  <ion-item >
+    <ion-label class="email" position="floating">E-mail</ion-label>
+    <ion-input #email></ion-input>
+  </ion-item>
+</ion-card>
+<ion-card class="suasenha">
+  <ion-item >
+    <ion-label class="senha"   position="floating">Senha</ion-label>
+    <ion-input #password></ion-input>
+  </ion-item>
+</ion-card>
+<h1 class="entrar" type="submit"  (click)="logIn(email, password)" [routerLink]="['/inicioempresa']">Entrar</h1>
+<h1 class="esqueci" [routerLink]="['/esquecisenha']">Esqueci minha senha</h1>
+<h1 class="empresa" [routerLink]="['/log-aluno']">Entrar como aluno</h1>
 </ion-content>

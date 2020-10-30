@@ -89,7 +89,9 @@ font-style: normal;
 font-weight: normal;
 font-size: 13px;
 line-height: 19px;
-/* identical to box height */
+border: 1px solid white;
+border-radius: 10px;
+--box-shadow: none !important;
 
 letter-spacing: 0.015em;
 
