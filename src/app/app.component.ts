@@ -7,7 +7,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import {AuthService} from '../app/shared/auth.service'
+import {AuthService} from './shared/auth.service'
 import { Router} from "@angular/router"
 import '../environments/environment';
 
@@ -62,11 +62,12 @@ darkMode: any;
       this.applyDarkness(e);
     });
   }
-
+  
   applyDarkness(matchMediaEvent) {
     if (matchMediaEvent.matches) {
+      //Tem que troar o false do toggle dps, depende do plano de cor do windows. Apenas dev
       this.darkMode = true;
-      document.body.classList.toggle('dark', true);
+      document.body.classList.toggle('dark', false);
     } else {
       this.darkMode = false;
       document.body.classList.toggle('dark', false);

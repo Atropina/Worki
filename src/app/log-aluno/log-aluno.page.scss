@@ -21,13 +21,13 @@
  position: absolute;
 width: 248px;
 height: 73px;
-left: 28px;
-top: 172px;
+left: 5%;
+top: 25%;
 
 font-family: Noto Sans TC;
 font-style: normal;
 font-weight: bold;
-font-size: 30px;
+font-size: 1.8rem;
 line-height: 43px;
 letter-spacing: 0.015em;
 
@@ -39,19 +39,16 @@ color: #FFFFFF;
     --ion-background-color: transparent;
     position: absolute;
     width: 188px;
-   
-    left: 28px;
-    top: 333px;
-    
-
+    left: 10%;
+    top: 45%;
 }
 
 .suasenha{
     --ion-background-color: transparent;
     position: absolute;
 width: 188px;
-left: 28px;
-top: 407px;
+left: 10%;
+top: 55%;
 
 
 }
@@ -134,3 +131,4 @@ color: #FFFFFF;
     
 
 }
+ion-item{ --border-color: rgb(255, 255, 255); }

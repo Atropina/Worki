@@ -1,9 +1,9 @@
 <ion-app>
-  <div class="cardFundo"> </div>
+ 
   <meta name="color-scheme" content="#" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu color="secondary" contentId="main-content" type="overlay">
     
       <ion-content>
         <ion-list id="inbox-list">
@@ -34,7 +34,7 @@
           <ion-item lines="full">
             <ion-icon slot="start" name="moon"></ion-icon>
             <ion-label>
-              Toggle Dark Theme
+              Modo Escuro
             </ion-label>
             <ion-toggle checked='true' (ionChange)="toggleDarkness()" value='true' [(ngModel)]="darkMode"></ion-toggle>
           </ion-item>
@@ -46,9 +46,9 @@
             <ion-item lines='none'>
               <ion-button (click)="logOut()">
                 <ion-icon slot="start" slot="icon-only" name="log-out"></ion-icon>
-                <ion-label>
+              
                   Sair
-                </ion-label>
+              
               </ion-button>
             </ion-item>
           </ion-menu-toggle>
