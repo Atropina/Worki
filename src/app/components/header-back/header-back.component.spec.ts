@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { CadAlunoPage } from './cad-aluno.page';
+import { HeaderBackComponent } from './header-back.component';
 
-describe('CadAlunoPage', () => {
-  let component: CadAlunoPage;
-  let fixture: ComponentFixture<CadAlunoPage>;
+describe('HeaderBackComponent', () => {
+  let component: HeaderBackComponent;
+  let fixture: ComponentFixture<HeaderBackComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CadAlunoPage ],
+      declarations: [ HeaderBackComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CadAlunoPage);
+    fixture = TestBed.createComponent(HeaderBackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

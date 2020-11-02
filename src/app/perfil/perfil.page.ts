@@ -11,8 +11,7 @@ export class PerfilPage implements OnInit {
   constructor( private authService: AuthService) { }
 
   ngOnInit() {
-    this.emailUser = this.authService.emailUser;
-    console.log(this.emailUser)
+    
   }
 
 }

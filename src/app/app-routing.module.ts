@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [  
   {
     path: '',
-    redirectTo: 'question',
+    redirectTo: 'cadastro-candidato',
     pathMatch: 'full'
   },
   {
@@ -20,10 +20,7 @@ const routes: Routes = [
     path: 'log-empresa',
     loadChildren: () => import('./log-empresa/log-empresa.module').then( m => m.LogEmpresaPageModule)
   },
-  {
-    path: 'cad-aluno',
-    loadChildren: () => import('./cad-aluno/cad-aluno.module').then( m => m.CadAlunoPageModule)
-  },
+  
   {
     path: 'tab',
     loadChildren: () => import('./tabs/tab/tab.module').then( m => m.TabPageModule)
@@ -52,7 +49,11 @@ const routes: Routes = [
   {
     path: 'inicioempresa',
     loadChildren: () => import('./inicioempresa/inicioempresa.module').then( m => m.InicioempresaPageModule)
+  },  {
+    path: 'cadastro-candidato',
+    loadChildren: () => import('./cadastro-candidato/cadastro-candidato.module').then( m => m.CadastroCandidatoPageModule)
   },
+
 
  
 ];

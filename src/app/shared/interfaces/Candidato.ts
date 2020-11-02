@@ -1,14 +1,18 @@
-interface Candidatos  {
+export interface Candidatos  {
   nome:string,
-  email:string,
-  celular:string,
-  whatsapp:boolean,
   cpf:string,
+  email:string,
+  nascimento: string,
+  celular:string,
+  empregado: boolean,
+  pcd:boolean,
   cep: string,
   estado: string,
   cidade: string,
-  empregado: boolean,
-  pcd:boolean,
+  endereco: string,
+  numero: string
+  senha:string,
   nivel: number,
-  createdat: Date
+  createdat: string
 }
+
