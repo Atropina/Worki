@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { copyFile } from 'fs';
+
 import { Candidatos } from '.././shared/interfaces/Candidato'
 import { AuthService } from '../shared/auth.service'
 
@@ -11,11 +11,22 @@ import { AuthService } from '../shared/auth.service'
 export class CadastroCandidatoPage implements OnInit {
 
   constructor( private auth : AuthService ) { }
-
+   rua:any
+   uf:any
+   cidade:any
   ngOnInit() {
   }
 
-  validaForm(nome, cpf, email, nascimento, celular, pcd, empregado, cep, uf, cidade, endereco, numero, senha){
+  async autoCep(cep){
+    console.log(cep.value)
+    const res = await fetch("https://viacep.com.br/ws/"+cep.value+ "/json/");
+    const endereco = await res.json();
+    this.cidade = endereco.localidade;
+    this.rua = endereco.logradouro;
+    this.uf = endereco.uf
+  }
+  
+  validaForm(nome, cpf, email, nascimento, celular, pcd, empregado, cep, numero, senha){
     console.log("chamou")
     const dados : Candidatos = {
       nome: nome.value,
@@ -26,16 +37,16 @@ export class CadastroCandidatoPage implements OnInit {
       pcd: pcd.value,
       empregado: empregado.value,
       cep: cep.value,
-      estado: uf.value,
-      cidade:cidade.value,
-      endereco: endereco.value,
+      estado: this.uf,
+      cidade: this.cidade,
+      endereco: this.rua ,
       numero: numero.value,
-      senha: senha.value,
+      
       createdat: Date().toString(),
       nivel: 1
     }
-    console.log(senha)
-    this.auth.createUser(dados.email, dados.senha, dados);
+ 
+    this.auth.createUser(dados.email, senha.value, dados);
     
   }
 }

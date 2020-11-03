@@ -1,9 +1,9 @@
 <app-header-back>
   
 </app-header-back>
-<ion-content>
+<ion-content fullscrean>
 
- <form (ngSubmit)="validaForm(nome,cpf, email, nascimento, celular, pcd, empregado, cep, uf, cidade, endereco, numero, senha)">
+ <form (ngSubmit)="validaForm(nome,cpf, email, nascimento, celular, pcd, empregado, cep, numero, senha)">
    <ion-label >Nome <ion-text color="danger">*</ion-text></ion-label>
    <ion-item>
      
@@ -12,7 +12,7 @@
    <ion-label >CPF <ion-text color="danger">*</ion-text></ion-label>
    <ion-item>
      
-     <ion-input #cpf required  type="text"></ion-input>
+     <ion-input #cpf required  aria-valuemin="14" aria-valuemax="14" type="text"></ion-input>
    </ion-item>
 
    <ion-label > E-mail <ion-text color="danger">*</ion-text></ion-label>
@@ -21,6 +21,7 @@
      <ion-input #email required  type="text"></ion-input>
    </ion-item>
    <ion-label > Data de nascimento <ion-text color="danger">*</ion-text></ion-label>
+   
    <ion-item>
      
      <ion-input #nascimento required  type="date"></ion-input>
@@ -28,7 +29,7 @@
    <ion-label > Celular <ion-text color="danger">*</ion-text></ion-label>
    <ion-item>
      
-     <ion-input #celular required  type="text"></ion-input>
+     <ion-input #celular required  mask='99-99999-9999' type="text"></ion-input>
    </ion-item>
    <ion-grid fixed>
      <ion-row>
@@ -52,50 +53,16 @@
        </ion-col>
      </ion-row>
    </ion-grid>
-   <ion-label > CEP <ion-text color="danger">*</ion-text></ion-label>
-
-   <ion-item>
-     
-     <ion-input #cep required  type="text"></ion-input>
-   </ion-item>
    
    
-
-   <ion-grid fixed>
-     <ion-row>
-       <ion-col size="6">
-        <ion-label>Estado</ion-label>
-       
-          
-          <ion-select #uf placeholder="Selecione">
-            <ion-select-option value="PR">Parana</ion-select-option>
-            <ion-select-option value="SC">Santa Catararina</ion-select-option>
-            <ion-select-option value="RS">Rio Grande do Sul</ion-select-option>
-          </ion-select>
-       
-       </ion-col>
-       <ion-col size="6">
-        <ion-label>Cidade</ion-label>
-       
-          
-          <ion-select #cidade placeholder="Selecione">
-            <ion-select-option value="PR">Parana</ion-select-option>
-            <ion-select-option value="SC">Santa Catararina</ion-select-option>
-            <ion-select-option value="RS">Rio Grande do Sul</ion-select-option>
-          </ion-select>
-      
-       </ion-col>
-     </ion-row>
-   </ion-grid>
-
    <ion-grid fixed>
      <ion-row>
        <ion-col size="8">
-        <ion-label > Endereço <ion-text color="danger">*</ion-text></ion-label>
+        <ion-label > CEP <ion-text color="danger">*</ion-text></ion-label>
 
-        <ion-item class="itemWidth">
+        <ion-item class="itemWidth"> 
           
-          <ion-input #endereco required  type="text"></ion-input>
+          <ion-input  #cep required (ionInput)="autoCep(cep)" type="text"></ion-input>
         </ion-item>
      
        </ion-col>

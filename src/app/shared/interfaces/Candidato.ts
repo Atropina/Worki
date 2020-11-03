@@ -10,8 +10,7 @@ export interface Candidatos  {
   estado: string,
   cidade: string,
   endereco: string,
-  numero: string
-  senha:string,
+  numero: string,
   nivel: number,
   createdat: string
 }
