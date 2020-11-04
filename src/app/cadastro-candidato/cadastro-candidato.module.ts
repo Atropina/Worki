@@ -8,6 +8,8 @@ import { CadastroCandidatoPageRoutingModule } from './cadastro-candidato-routing
 
 import { CadastroCandidatoPage } from './cadastro-candidato.page';
 import { HeaderBackComponent } from '../components/header-back/header-back.component';
+import { BrMaskerModule } from 'br-mask'
+
 
 @NgModule({
   
@@ -15,7 +17,8 @@ import { HeaderBackComponent } from '../components/header-back/header-back.compo
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastroCandidatoPageRoutingModule
+    CadastroCandidatoPageRoutingModule,
+    BrMaskerModule
     
   ],
   entryComponents: [HeaderBackComponent],

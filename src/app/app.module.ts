@@ -17,6 +17,9 @@ import '../environments/environment';
 import { environment } from '../environments/environment';
 
 
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -27,7 +30,9 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebaseConfig), 
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserModule
+   
   ],
   providers: [
     StatusBar,

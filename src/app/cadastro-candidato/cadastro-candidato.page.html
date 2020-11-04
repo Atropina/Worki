@@ -12,25 +12,37 @@
    <ion-label >CPF <ion-text color="danger">*</ion-text></ion-label>
    <ion-item>
      
-     <ion-input #cpf required  aria-valuemin="14" aria-valuemax="14" type="text"></ion-input>
+     <ion-input #cpf required  [brmasker]="{person: true}" type="text"></ion-input>
    </ion-item>
 
    <ion-label > E-mail <ion-text color="danger">*</ion-text></ion-label>
    <ion-item>
      
-     <ion-input #email required  type="text"></ion-input>
+     <ion-input #email required  type="email"></ion-input>
    </ion-item>
-   <ion-label > Data de nascimento <ion-text color="danger">*</ion-text></ion-label>
+
+   <ion-grid fixed>
+     <ion-row>
+       <ion-col size="6">
+         
+        <ion-label >Nascimento <ion-text color="danger">*</ion-text></ion-label>
+        
+        <ion-item class="nascimento">
+          
+          <ion-input #nascimento required  [brmasker]="{mask: '00/00/0000', type:'date', len:10}"></ion-input>
+        </ion-item>
+       </ion-col>
+       <ion-col size="6">
+        <ion-label > Celular <ion-text color="danger">*</ion-text></ion-label>
+        <ion-item class="celular">
+          
+          <ion-input  #celular required  [brmasker]="{phone: true}"  type="text"></ion-input>
+        </ion-item>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+
    
-   <ion-item>
-     
-     <ion-input #nascimento required  type="date"></ion-input>
-   </ion-item>
-   <ion-label > Celular <ion-text color="danger">*</ion-text></ion-label>
-   <ion-item>
-     
-     <ion-input #celular required  mask='99-99999-9999' type="text"></ion-input>
-   </ion-item>
    <ion-grid fixed>
      <ion-row>
        <ion-col size="6">
@@ -62,7 +74,7 @@
 
         <ion-item class="itemWidth"> 
           
-          <ion-input  #cep required (ionInput)="autoCep(cep)" type="text"></ion-input>
+          <ion-input  #cep required [brmasker]="{mask: '00000-000', type:'num', len:9}" (ionInput)="autoCep(cep)" type="text"></ion-input>
         </ion-item>
      
        </ion-col>
@@ -78,21 +90,24 @@
      </ion-row>
    </ion-grid>
 
+   
+  <ion-label > Senha <ion-text color="danger">* <span *ngIf="data.password != data.password_confirm" class="error"> Campos devem ser iguais!!! </span></ion-text></ion-label>
   
-  <ion-label > Senha <ion-text color="danger">*</ion-text></ion-label>
-
   <ion-item>
     
-    <ion-input #senha required  type="password"></ion-input>
+    <ion-input #senha required  name="password" [(ngModel)]="data.password" type="password"></ion-input>
   </ion-item>
+
+
+  
   <ion-label > Confirmar Senha <ion-text color="danger">*</ion-text></ion-label>
 
   <ion-item>
     
-    <ion-input required  type="password"></ion-input>
+    <ion-input required  name="password_confirm" [(ngModel)]="data.password_confirm"   type="password"></ion-input>
   </ion-item>
 
-   <ion-button  block color="warning" type="submit" >
+   <ion-button  block color="warning" [disabled]="data.password != data.password_confirm" type="submit" >
      Cadastrar
    </ion-button>
  </form>

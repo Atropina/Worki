@@ -20,6 +20,7 @@ import '../environments/environment';
 
 export class AppComponent implements OnInit {
 darkMode: any;
+
   public selectedIndex = 0;
   public appPages = [
     {

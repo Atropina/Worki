@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 import { Candidatos } from '.././shared/interfaces/Candidato'
 import { AuthService } from '../shared/auth.service'
@@ -10,10 +11,17 @@ import { AuthService } from '../shared/auth.service'
 })
 export class CadastroCandidatoPage implements OnInit {
 
-  constructor( private auth : AuthService ) { }
+  constructor( private auth : AuthService, private toast : ToastController) { }
    rua:any
    uf:any
    cidade:any
+
+   senha:any;
+   confirmaSenha:any
+   data = {
+    password: '',
+    password_confirm: '',
+  };
   ngOnInit() {
   }
 
@@ -25,9 +33,12 @@ export class CadastroCandidatoPage implements OnInit {
     this.rua = endereco.logradouro;
     this.uf = endereco.uf
   }
+
+    
+  
   
   validaForm(nome, cpf, email, nascimento, celular, pcd, empregado, cep, numero, senha){
-    console.log("chamou")
+    
     const dados : Candidatos = {
       nome: nome.value,
       cpf:cpf.value,

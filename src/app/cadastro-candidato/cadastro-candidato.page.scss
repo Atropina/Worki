@@ -5,7 +5,7 @@ ion-content, ion-header{
 ion-item{
   width: 320px;
   border-radius: 10px;
-  left: 7%;
+  left: 6%;
   top: 10px;
   margin-bottom: 15px;
   --border-color: rgb(255, 255, 255); 
@@ -51,4 +51,14 @@ ion-button{
   color: var(--ion-color-medium) !important;
   font-family: Noto Sans TC;
  
+}
+
+.celular{
+  width: 150px;
+  
+}
+
+.nascimento{
+  width: 160px;
+  
 }
