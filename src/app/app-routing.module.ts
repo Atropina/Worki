@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [  
   {
     path: '',
-    redirectTo: 'cadastro-candidato',
+    redirectTo: 'question',
     pathMatch: 'full'
   },
   {
@@ -21,15 +21,6 @@ const routes: Routes = [
     loadChildren: () => import('./log-empresa/log-empresa.module').then( m => m.LogEmpresaPageModule)
   },
   
-  {
-    path: 'tab',
-    loadChildren: () => import('./tabs/tab/tab.module').then( m => m.TabPageModule)
-  },
- 
-  {
-    path: 'tab3',
-    loadChildren: () => import('./tabs/tab3/tab3.module').then( m => m.Tab3PageModule)
-  },
   {
     path: 'question',
     loadChildren: () => import('./question/question.module').then( m => m.QuestionPageModule)
@@ -49,7 +40,8 @@ const routes: Routes = [
   {
     path: 'inicioempresa',
     loadChildren: () => import('./inicioempresa/inicioempresa.module').then( m => m.InicioempresaPageModule)
-  },  {
+  },
+  {
     path: 'cadastro-candidato',
     loadChildren: () => import('./cadastro-candidato/cadastro-candidato.module').then( m => m.CadastroCandidatoPageModule)
   },
@@ -57,6 +49,11 @@ const routes: Routes = [
     path: 'verifica-email',
     loadChildren: () => import('./verifica-email/verifica-email.module').then( m => m.VerificaEmailPageModule)
   },
+  {
+    path: 'cadastro-empresa',
+    loadChildren: () => import('./cadastro-empresa/cadastro-empresa.module').then( m => m.CadastroEmpresaPageModule)
+  },
+
 
 
  

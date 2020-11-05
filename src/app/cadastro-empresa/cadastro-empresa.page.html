@@ -1,0 +1,102 @@
+<app-header-back>
+  
+</app-header-back>
+
+<ion-content fullscrean>
+  <form (ngSubmit)="validaForm()">
+    <ion-label >Nome da empresa <ion-text color="danger">*</ion-text></ion-label>
+    <ion-item>
+      
+      <ion-input [(ngModel)] name='nomeEmpresa' required  type="text"></ion-input>
+    </ion-item>
+    <ion-label >CNPJ <ion-text color="danger">*</ion-text></ion-label>
+    <ion-item>
+      
+      <ion-input [(ngModel)] name='cnpj' required  [brmasker]="{person: true}" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-label >E-mail<ion-text color="danger">*</ion-text></ion-label>
+    <ion-item>
+      
+      <ion-input [(ngModel)] name="email" required  type="email"></ion-input>
+    </ion-item>
+ 
+    
+       
+    <ion-label > Celular <ion-text color="danger">*</ion-text></ion-label>
+    <ion-item >
+      
+      <ion-input  [(ngModel)] name='celular' required  [brmasker]="{phone: true}"  type="text"></ion-input>
+    </ion-item>
+
+    
+    
+      
+ 
+    
+    
+    
+    
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="8">
+         <ion-label > CEP <ion-text color="danger">*</ion-text></ion-label>
+ 
+         <ion-item class="itemWidth"> 
+           
+           <ion-input  #cep [(ngModel)] name="cep" required [brmasker]="{mask: '00000-000', type:'num', len:9}" (ionInput)="autoCep(cep)" type="text"></ion-input>
+         </ion-item>
+      
+        </ion-col>
+        <ion-col size="4">
+         <ion-label > Número <ion-text color="danger">*</ion-text></ion-label>
+ 
+         <ion-item class="itemWidth-2">
+           
+           <ion-input #numero required  type="text"></ion-input>
+         </ion-item>
+      
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-label > Complemento <span class="complemento" color="medium">Ex: 4° andar, sala 3</span></ion-label>
+    <ion-item >
+      
+      <ion-input  #celular required  [brmasker]="{phone: true}"  type="text"></ion-input>
+    </ion-item>
+    
+    <ion-label > Segmento <ion-text color="danger">*</ion-text></ion-label>
+
+    <ion-item>
+      <ion-select multiple>
+        
+        <ion-select-option *ngFor="let area of areas" [value]="area">{{area}}</ion-select-option>
+        
+      </ion-select>
+
+    </ion-item>
+
+   <ion-label > Senha <ion-text color="danger">* <span  class="error"> Campos devem ser iguais!!! </span> 
+                                                 <span *ngIf="6 == data.password.length" class="error">A senha deve conter no minimo 6 caracteres.</span>
+                       </ion-text>
+   </ion-label>
+   
+   <ion-item>
+     
+     <ion-input #senha required  name="password" [(ngModel)]="data.password" type="password"></ion-input>
+   </ion-item>
+ 
+ 
+   
+   <ion-label > Confirmar Senha <ion-text color="danger">*</ion-text></ion-label>
+ 
+   <ion-item>
+     
+     <ion-input required  name="password_confirm" [(ngModel)]="data.password_confirm"   type="password"></ion-input>
+   </ion-item>
+ 
+    <ion-button  block color="warning" [disabled]="data.password != data.password_confirm" type="submit" >
+      Cadastrar
+    </ion-button>
+  </form> 
+</ion-content>
