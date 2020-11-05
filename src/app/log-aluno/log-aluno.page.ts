@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { auth } from 'firebase';
 import { Router } from '@angular/router'
 import {AuthService} from '../shared/auth.service'
-import { AlertController  } from '@ionic/angular'
+import { AlertController, ModalController  } from '@ionic/angular'
+
 @Component({
   selector: 'app-log-aluno',
   templateUrl: './log-aluno.page.html',
@@ -10,11 +11,17 @@ import { AlertController  } from '@ionic/angular'
 })
 export class LogAlunoPage implements OnInit {
 
-  constructor( private auth : AuthService, private router : Router, private alert : AlertController) { }
+  constructor( private auth : AuthService, private router : Router, private alert : AlertController, private modalCtrl : ModalController) { }
 
   ngOnInit() {
   }
 
+    async modalSenha(){
+      const modal = await this.modalCtrl.create({
+        component: 'EsqueciSenhaComponent'
+      })
+      return await modal.present()
+    }
     logIn(email, password){
     this.auth.SignIn(email.value, password.value).then( (res)=>{
       

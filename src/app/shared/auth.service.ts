@@ -3,6 +3,7 @@ import { from } from 'rxjs';
 import { AngularFireAuth} from '@angular/fire/auth'
 import { Router} from '@angular/router'
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { NOMEM } from 'dns';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,12 @@ export class AuthService {
       user => {
         if(user){
           localStorage.setItem("user" , JSON.stringify(user));
-          this.router.navigate(["inicio"])
+          if (JSON.parse(localStorage.getItem("user")).emailVerified) {
+            this.router.navigate(["inicio"])
+          } else {
+            user.sendEmailVerification()
+            this.router.navigate(["verifica-email"])
+          }
         }else{
           localStorage.setItem("user", null);
         }
@@ -22,11 +28,7 @@ export class AuthService {
     )
   }
 
-  get userName():string {
-    const user = JSON.parse(localStorage.getItem("user"))
-    console.log(user)
-    return user.name
-  }
+ 
 
   SignIn(email, password){
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);
@@ -38,9 +40,12 @@ export class AuthService {
     })
   }
 
-  createUser(email, senha, userData){
+  createUser(email, senha, userData, nome){
     this.ngFireAuth.createUserWithEmailAndPassword(email, senha).then( (res)=>{
-      
+    
+      res.user.updateProfile({
+        displayName: nome
+      })
       this.saveUserData(res.user.uid, userData)
     }).catch( (err) =>{
       console.log(err)

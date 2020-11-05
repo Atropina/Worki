@@ -53,6 +53,10 @@ const routes: Routes = [
     path: 'cadastro-candidato',
     loadChildren: () => import('./cadastro-candidato/cadastro-candidato.module').then( m => m.CadastroCandidatoPageModule)
   },
+  {
+    path: 'verifica-email',
+    loadChildren: () => import('./verifica-email/verifica-email.module').then( m => m.VerificaEmailPageModule)
+  },
 
 
  

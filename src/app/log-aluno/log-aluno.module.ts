@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { LogAlunoPageRoutingModule } from './log-aluno-routing.module';
 
 import { LogAlunoPage } from './log-aluno.page';
+import { EsqueciSenhaComponent } from '../components/esqueci-senha/esqueci-senha.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,9 @@ import { LogAlunoPage } from './log-aluno.page';
     FormsModule,
     IonicModule,
     LogAlunoPageRoutingModule
+    
   ],
-  declarations: [LogAlunoPage]
+  entryComponents :[EsqueciSenhaComponent],
+  declarations: [LogAlunoPage, EsqueciSenhaComponent]
 })
 export class LogAlunoPageModule {}
