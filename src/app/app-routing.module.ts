@@ -49,7 +49,8 @@ const routes: Routes = [
   {
     path: 'inicioempresa',
     loadChildren: () => import('./inicioempresa/inicioempresa.module').then( m => m.InicioempresaPageModule)
-  },  {
+  },
+  {
     path: 'cadastro-candidato',
     loadChildren: () => import('./cadastro-candidato/cadastro-candidato.module').then( m => m.CadastroCandidatoPageModule)
   },
