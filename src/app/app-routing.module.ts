@@ -22,15 +22,6 @@ const routes: Routes = [
   },
   
   {
-    path: 'tab',
-    loadChildren: () => import('./tabs/tab/tab.module').then( m => m.TabPageModule)
-  },
- 
-  {
-    path: 'tab3',
-    loadChildren: () => import('./tabs/tab3/tab3.module').then( m => m.Tab3PageModule)
-  },
-  {
     path: 'question',
     loadChildren: () => import('./question/question.module').then( m => m.QuestionPageModule)
   },
@@ -58,6 +49,11 @@ const routes: Routes = [
     path: 'verifica-email',
     loadChildren: () => import('./verifica-email/verifica-email.module').then( m => m.VerificaEmailPageModule)
   },
+  {
+    path: 'cadastro-empresa',
+    loadChildren: () => import('./cadastro-empresa/cadastro-empresa.module').then( m => m.CadastroEmpresaPageModule)
+  },
+
 
 
  

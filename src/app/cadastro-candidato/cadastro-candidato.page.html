@@ -91,7 +91,10 @@
    </ion-grid>
 
    
-  <ion-label > Senha <ion-text color="danger">* <span *ngIf="data.password != data.password_confirm" class="error"> Campos devem ser iguais!!! </span></ion-text></ion-label>
+  <ion-label > Senha <ion-text color="danger">* <span *ngIf="data.password != data.password_confirm" class="error"> Campos devem ser iguais!!! </span> 
+                                                <span *ngIf="6 == data.password.length" class="error">A senha deve conter no minimo 6 caracteres.</span>
+                      </ion-text>
+  </ion-label>
   
   <ion-item>
     

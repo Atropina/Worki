@@ -64,7 +64,7 @@ height: 38px;
 left: 89px;
 top: 420px;
 
-background: var(--ion-color-light);
+--background: var(--ion-color-light) !important;
 box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.53);
 border-radius: 10px;
 
