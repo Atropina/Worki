@@ -1,13 +1,24 @@
 <ion-content>
-<h1>
-  OI, AGORA VAMOS PRECISAMOS QUE VOCÊ VERIFIQUE SEU EMAIL.
+
+<h1  class="h1">
+  Agora precisamos que você verifique seu email!
 </h1>
 
-<h2>
-  Enviamos um link mágico para seu email ( {{user.email}} ), basta clicar para confirmar.
+<h2 class="h2">
+  Enviamos um link mágico
+para seu email (xxx@gmail.com), basta clicar nele para confirmar.
 </h2>
 
-<ion-button (click)="onClick()" expand="block" fill='solid' >
-  Pronto, confirmei
+<ion-button class="botao1" (click)="onClick()" expand="block" fill='solid' >
+  PRONTO, CONFIRMEI!
 </ion-button>
+
+<h3 class="h3">
+  Não recebeu seu email? Clique no botão abaixo.
+</h3>
+
+<ion-button class="botao2" (click)="onClick()" expand="block" fill='solid' >
+  RE-ENVIAR EMAIL
+</ion-button>
+
 </ion-content>
