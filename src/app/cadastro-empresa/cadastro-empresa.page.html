@@ -13,6 +13,7 @@
 
   
     <ion-label >CNPJ <ion-text color="danger">*</ion-text></ion-label>
+    
     <ion-item>
       <ion-input ngModel name='cnpj' required  [brmasker]="{person: true}" type="text"></ion-input>
     </ion-item>
@@ -91,7 +92,7 @@
      <ion-input required  name="password_confirm" [(ngModel)]="data.password_confirm"   type="password"></ion-input>
    </ion-item>
  
-    <ion-button  block color="warning" [disabled]="data.password != data.password_confirm" type="submit" >
+    <ion-button  block color="warning" [disabled]="data.password != data.password_confirm || !f.valid" type="submit" >
       Cadastrar
     </ion-button>
   </form> 

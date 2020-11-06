@@ -16,6 +16,7 @@ ion-toolbar {
     margin-bottom: 15px;
     --border-color: rgb(255, 255, 255); 
     --ion-background-color: var(--ion-color-tertiary);
+    --highlight-background: rgb(24, 22, 155) ;
     color: var(--ion-color-medium)
   }
   ion-label{
@@ -80,6 +81,3 @@ ion-toolbar {
     display: none !important;
    }
 
-.ion-invalid.ion-touched{
-  border: red 2px;
-}
