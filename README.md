@@ -6,7 +6,7 @@ Professora: @julianamartins
 
 Membros: @Nubiia
 
-O Worki é um aplicativo feito para ser uma via de mão dupla entre Empresa(recrutador) e o canditato. O app visa facilitar a divulgação de vagas das empresas e desburocratizar o processo de contratação e entrevistas de emprego.
+O Worki é um aplicativo feito para ser uma via de mão dupla entre Empresa(Recrutador) e Canditato. O app visa facilitar a divulgação de vagas das empresas e desburocratizar o processo de contratação e entrevistas de emprego.
 
 Tecnologias usadas:
   * Node.js;
