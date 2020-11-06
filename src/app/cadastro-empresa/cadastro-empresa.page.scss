@@ -79,3 +79,7 @@ ion-toolbar {
   ion-select::part(icon) {
     display: none !important;
    }
+
+.ion-invalid.ion-touched{
+  border: red 2px;
+}
