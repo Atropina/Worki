@@ -20,6 +20,9 @@ import '../environments/environment';
 
 export class AppComponent implements OnInit {
 darkMode: any;
+userData:any;
+userName:any;
+
 
   public selectedIndex = 0;
   public appPages = [
@@ -30,10 +33,31 @@ darkMode: any;
     },
 
     {
-      title: 'Perfil',
-      url: '/perfil',
+      title: 'Cadastro Empresa',
+      url: '/cadastro-empresa',
       icon: 'contact'
-    }
+    },
+    {
+      title: 'Cadastro Candidato',
+      url: '/cadastro-candidato',
+      icon: 'contact'
+    },
+    {
+      title: 'Inicio Empresa',
+      url: '/inicioempresa',
+      icon: 'contact'
+    },
+    {
+      title: 'Login Aluno',
+      url: '/log-aluno',
+      icon: 'contact'
+    },
+    {
+      title: 'Loogin Empresa',
+      url: '/log-empresa',
+      icon: 'contact'
+    },
+   
 
 
   ];
@@ -62,8 +86,18 @@ darkMode: any;
     osDarkness.addListener(e => {
       this.applyDarkness(e);
     });
+
+    
+    
   }
   
+
+  getUserDataAndName(){
+    this.userData = JSON.parse(localStorage.getItem("user"));
+    this.userName = this.userData.displayName
+    console.log(this.userData)
+  }
+
   applyDarkness(matchMediaEvent) {
     if (matchMediaEvent.matches) {
       //Tem que troar o false do toggle dps, depende do plano de cor do windows. Apenas dev
@@ -98,6 +132,7 @@ darkMode: any;
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.getUserDataAndName()
     });
   }
 

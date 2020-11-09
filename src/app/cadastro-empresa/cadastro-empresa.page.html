@@ -79,7 +79,7 @@
 
 
 
-    <ion-label > Senha <ion-text color="danger">* <span  class="error"> Campos devem ser iguais!!! </span> </ion-text>
+    <ion-label > Senha <ion-text color="danger">*  </ion-text>
     </ion-label>
     <ion-item>
       <ion-input #senha required  name="password" [(ngModel)]="data.password" type="password"></ion-input>
@@ -87,7 +87,7 @@
  
  
    
-   <ion-label > Confirmar Senha <ion-text color="danger">*</ion-text></ion-label>
+   <ion-label > Confirmar Senha <ion-text color="danger">*  <span *ngIf="data.password != data.password_confirm" class="error"> Campos devem ser iguais!!! </span></ion-text></ion-label>
    <ion-item>
      <ion-input required  name="password_confirm" [(ngModel)]="data.password_confirm"   type="password"></ion-input>
    </ion-item>

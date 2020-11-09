@@ -7,3 +7,8 @@ ion-content, ion-header{
   background-image: none !important;
   border-bottom: none !important;
 }
+
+.item{
+  --background: transparent;
+  --ion-color-base: transparent !important;
+}
