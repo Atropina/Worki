@@ -15,12 +15,17 @@ export class AuthService {
       user => {
         if(user){
           localStorage.setItem("user" , JSON.stringify(user));
-          if (JSON.parse(localStorage.getItem("user")).emailVerified) {
-            this.router.navigate(["inicio"])
-          } else {
-            user.sendEmailVerification()
-            this.router.navigate(["verifica-email"])
-          }
+          //if (JSON.parse(localStorage.getItem("user")).emailVerified) {
+            if (JSON.parse(localStorage.getItem("user")).nivel == 1) {
+              this.router.navigate(["inicio"])
+            } else {
+              this.router.navigate(["inicioempresa"])
+            }
+            
+          //} else {
+           // user.sendEmailVerification()
+            //this.router.navigate(["verifica-email"])
+          //}
         }else{
           localStorage.setItem("user", null);
         }
@@ -40,21 +45,26 @@ export class AuthService {
     })
   }
 
-  createUser(email, senha, userData, nome){
+  createUser(email, senha, userData, nome, tipo){
+    console.log(nome)
     this.ngFireAuth.createUserWithEmailAndPassword(email, senha).then( (res)=>{
     
       res.user.updateProfile({
         displayName: nome
       })
-      this.saveUserData(res.user.uid, userData)
+      this.saveUserData(res.user.uid, userData, tipo)
     }).catch( (err) =>{
       console.log(err)
     })
   }
 
-  saveUserData(uid, userData){
-    const userRef: AngularFirestoreDocument<any> = this.ngFirestore.doc('candidatos/' + uid);
-    return userRef.set(userData, {merge:true})
+  saveUserData(uid, userData, tipo){
+    const userRef: AngularFirestoreDocument<any> = this.ngFirestore.doc(tipo+'/' + uid);
+    return userRef.set(userData, {merge:true}).then( (res)=>{
+      console.log(res)
+    }).catch((err)=>{
+      console.log(err)
+    })
   }
 }
 

@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class InicioempresaPage implements OnInit {
 
   constructor() { }
-
+  empresaData = JSON.parse(localStorage.getItem("user"));
+  empresa:string
+  
   ngOnInit() {
+    this.empresa = this.empresaData.displayName
   }
 
 }

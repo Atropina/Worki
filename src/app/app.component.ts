@@ -11,6 +11,7 @@ import {AuthService} from './shared/auth.service'
 import { Router} from "@angular/router"
 import '../environments/environment';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -62,6 +63,11 @@ darkMode: any;
     osDarkness.addListener(e => {
       this.applyDarkness(e);
     });
+
+    this.statusBar.overlaysWebView(true);
+
+    // set status bar to white
+    this.statusBar.backgroundColorByHexString('#F7941E');
   }
   
   applyDarkness(matchMediaEvent) {

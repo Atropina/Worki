@@ -57,7 +57,7 @@ export class CadastroCandidatoPage implements OnInit {
       nivel: 1
     }
  
-    this.auth.createUser(dados.email, senha.value, dados, dados.nome);
+    this.auth.createUser(dados.email, senha.value, dados, dados.nome, "candidato");
     
   }
 }

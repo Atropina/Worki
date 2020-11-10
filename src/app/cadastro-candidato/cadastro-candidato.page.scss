@@ -2,10 +2,10 @@ ion-content, ion-header{
   --ion-background-color: var(--ion-color-secondary) !important;
 }
 
-ion-item{
-  width: 320px;
+.campoForm{
+  width: 90%;
   border-radius: 10px;
-  left: 6%;
+  left: 5%;
   top: 10px;
   margin-bottom: 15px;
   --border-color: rgb(255, 255, 255); 
@@ -37,11 +37,11 @@ ion-select {
 }
 
 .itemWidth{
-  width: 210px;
+  width: 90%;
 
 }
 .itemWidth-2{
-  width: 100px;
+  width:  86%;
 
 }
 ion-button{
