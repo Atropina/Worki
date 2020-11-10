@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InicioempresaPageRoutingModule } from './inicioempresa-routing.module';
 
 import { InicioempresaPage } from './inicioempresa.page';
+import { CardCandidatoComponent } from '../components/card-candidato/card-candidato.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { InicioempresaPage } from './inicioempresa.page';
     IonicModule,
     InicioempresaPageRoutingModule
   ],
+  entryComponents: [CardCandidatoComponent],
   declarations: [InicioempresaPage]
 })
 export class InicioempresaPageModule {}
