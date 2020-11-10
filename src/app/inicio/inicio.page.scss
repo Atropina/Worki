@@ -101,15 +101,6 @@ color: #3F3D56;
 
 }
 
-.imgculinaria{
-
-    position: absolute;
-width: 89px;
-height: 92px;
-left: 4px;
-top: 30px;
-
-}
 
 .informatica{
     background-color: var(--ion-color-medium);
@@ -289,3 +280,8 @@ ion-toolbar {
         margin-left: -1rem;
         
     }
+
+.slideCategoria{
+    top: 10%;
+    padding-right: 10px;
+}

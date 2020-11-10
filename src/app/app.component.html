@@ -3,23 +3,26 @@
   <meta name="color-scheme" content="#" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <ion-split-pane contentId="main-content">
-    <ion-menu color="secondary" contentId="main-content" type="overlay">
+    <ion-menu  contentId="main-content" type="overlay">
     
       <ion-content>
         <ion-list id="inbox-list">
           <ion-avatar>
             
              <img class="avatar" src="../../assets/img/profile.png" alt="">
-             <ion-label class="avatarnome">Núbia Knoll</ion-label>
+             <ion-label color="medium" class="avatarnome">{{userName}}</ion-label>
           </ion-avatar>
+          <br>
+          <br>
+          <h2>Modo de desenvolvimento</h2>
           <br>
           <br>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" (click)="debug()" routerDirection="root" [routerLink]="[p.url]"
-              lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+            <ion-item (click)="selectedIndex = i" lines='none' (click)="debug()" routerDirection="root" [routerLink]="[p.url]"
+               detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon slot="start"  [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label color="medium">{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
@@ -33,7 +36,7 @@
         <ion-list>
           <ion-item lines="full">
             <ion-icon slot="start" name="moon"></ion-icon>
-            <ion-label>
+            <ion-label color="medium">
               Modo Escuro
             </ion-label>
             <ion-toggle checked='true' (ionChange)="toggleDarkness()" value='true' [(ngModel)]="darkMode"></ion-toggle>
@@ -42,19 +45,29 @@
         </ion-list>
 
         <ion-list>
-          <ion-menu-toggle auto-hide='false'>
-            <ion-item lines='none'>
-              <ion-button (click)="logOut()">
-                <ion-icon slot="start" slot="icon-only" name="log-out"></ion-icon>
-              
-                  Sair
-              
-              </ion-button>
-            </ion-item>
-          </ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="settings-sharp"></ion-icon>
+            <ion-label color="medium">Configurações</ion-label>
+          </ion-item>
         </ion-list>
-
-
+        <ion-list>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="star-sharp"></ion-icon>
+            <ion-label color="medium">Sobre nós</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item lines="none">
+            <ion-icon slot="start" name="help-sharp"></ion-icon>
+            <ion-label color="medium">FAQ</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item lines="none" (click)="logOut()">
+            <ion-icon slot="start" name="power-sharp"></ion-icon>
+            <ion-label color="medium">Sair</ion-label>
+          </ion-item>
+        </ion-list>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

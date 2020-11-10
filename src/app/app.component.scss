@@ -1,16 +1,17 @@
-.cardFundo{
-    position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
-  background-color: var(--ion-color-secondary);
+ion-menu {
+    --ion-background-color: #57566E;
+    --ion-text-color: var(--ion-color-primary-contrast);
+  
+    ion-toolbar {
+      --background: #57566E;
+    }
+  
+    ion-list {/* optional, but it needs when you use gradient as a background color.*/
+      background: transparent;
+    }
+  }
 
-}
 
-ion-split-pane{
-    background-color: var(--ion-color-secondary);
-}
 
 .avatar{
     position: absolute;
