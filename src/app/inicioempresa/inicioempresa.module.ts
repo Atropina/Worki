@@ -17,6 +17,6 @@ import { CardCandidatoComponent } from '../components/card-candidato/card-candid
     InicioempresaPageRoutingModule
   ],
   entryComponents: [CardCandidatoComponent],
-  declarations: [InicioempresaPage]
+  declarations: [InicioempresaPage, CardCandidatoComponent]
 })
 export class InicioempresaPageModule {}
