@@ -92,7 +92,7 @@ userName:any;
     this.statusBar.overlaysWebView(true);
 
     // set status bar to white
-    this.statusBar.backgroundColorByHexString('#F7941E');
+    this.statusBar.backgroundColorByHexString('#d9821a');
 
   }
   

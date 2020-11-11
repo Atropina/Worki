@@ -6,6 +6,7 @@
   "scripts": {
     "ionlab": "ionic serve -l",
     "npmi": "npm i",
+    "run": "ionic cordova run android --device",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

@@ -1,33 +1,25 @@
-.card-titlecandidato{
-
-
- 
-
- 
-  }
-
 .candidatoCard{
- 
   top: 15%;
+  display: flex;
+  flex-direction: column;
   height: 100px;
   background: #F1F1F1;
   margin-top: 10px;
-
+  padding: 0 !important;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.67);
   border-radius: 10px;
+  width: 95%;
+  margin-left: 9px;
 }
 
 .avatar{
 padding: 5px 0 0 5px;
+width: max-content;
 }
 
 .avatarnome{
-  
-  position: absolute;
-  width: 106px;
-  height: 30px;
-  left: 75px;
-  top: 20px;
+ 
+  padding: 2px 0 0 5px;
 color: black;
 font-family: Noto Sans TC;
 font-style: normal;
@@ -39,23 +31,23 @@ letter-spacing: 0.015em;
 }
  .disponibilidade{
   
-  height: 35px;
+
   margin: 0 5px 5px 75px;
-  top: 20px;
+  
   color: rgb(0, 0, 0);
   font-family: Noto Sans TC;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
 }
  .formacao{
   
-  height: 35px;
-  margin: 0 5px 5px 75px;
-  top: 20px;
+  
+  margin: -80px 0 0 75px;
+
   color: rgb(0, 0, 0);
   font-family: Noto Sans TC;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
 }
