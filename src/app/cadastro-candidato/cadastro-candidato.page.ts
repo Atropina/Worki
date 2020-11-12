@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-
+import { MenuController } from '@ionic/angular';
 import { Candidatos } from '.././shared/interfaces/Candidato'
 import { AuthService } from '../shared/auth.service'
 
@@ -11,7 +11,7 @@ import { AuthService } from '../shared/auth.service'
 })
 export class CadastroCandidatoPage implements OnInit {
 
-  constructor( private auth : AuthService, private toast : ToastController) { }
+  constructor( private auth : AuthService, private toast : ToastController, public menuController: MenuController) { }
    rua:any
    uf:any
    cidade:any
@@ -60,4 +60,9 @@ export class CadastroCandidatoPage implements OnInit {
     this.auth.createUser(dados.email, senha.value, dados, dados.nome, "candidato");
     
   }
+
+  ionViewWillEnter(){
+    this.menuController.enable(false);
+  }
+
 }

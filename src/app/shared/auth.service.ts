@@ -23,7 +23,7 @@ export class AuthService {
       user => {
         if (user) {
           localStorage.setItem('user', JSON.stringify(user))
-          this.verificaTipo(JSON.parse(localStorage.getItem("user")).email)
+          //this.verificaTipo(JSON.parse(localStorage.getItem("user")).email)
           
           //if (JSON.parse(localStorage.getItem("user")).emailVerified) {
             
@@ -39,20 +39,20 @@ export class AuthService {
     )
   }
 
-  async verificaTipo(email) {
+  // async verificaTipo(email) {
     
-    await this.db.collection("user").where("uid", "==", email).get().then( (res) =>{
-      res.forEach(doc =>{
-        console.log(doc.id, "=>" , doc.data())
-      } )
-    }).catch( (err) =>[
-      console.log(err)
-    ])
+  //   await this.db.collection("user").where("uid", "==", email).get().then( (res) =>{
+  //     res.forEach(doc =>{
+  //       console.log(doc.id, "=>" , doc.data())
+  //     } )
+  //   }).catch( (err) =>[
+  //     console.log(err)
+  //   ])
     
 
 
    
-  }
+  // }
 
   SignIn(email, password) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);

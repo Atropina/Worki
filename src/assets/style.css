@@ -1,5 +1,16 @@
 .hr{
   --border-color: rgb(255, 255, 255);
   width: 94%;
+  --background: transparent !important;
+
+  
 }
 
+.botoes{
+  --background: var(--ion-color-light);
+  font-family: Noto Sans TC;
+  font-size: 15px;
+  font-style: normal;
+  color:white;
+
+}
