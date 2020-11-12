@@ -54,8 +54,13 @@ userName:any;
       icon: 'contact'
     },
     {
-      title: 'Loogin Empresa',
+      title: 'Login Empresa',
       url: '/log-empresa',
+      icon: 'contact'
+    },
+  {
+      title: 'verifica-email',
+      url: '/verifica-email',
       icon: 'contact'
     },
    
@@ -107,7 +112,7 @@ userName:any;
     if (matchMediaEvent.matches) {
       //Tem que troar o false do toggle dps, depende do plano de cor do windows. Apenas dev
       this.darkMode = true;
-      document.body.classList.toggle('dark', false);
+      document.body.classList.toggle('dark', true);
     } else {
       this.darkMode = false;
       document.body.classList.toggle('dark', false);
