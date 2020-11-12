@@ -54,7 +54,7 @@ export class CadastroCandidatoPage implements OnInit {
       numero: numero.value,
       
       createdat: Date().toString(),
-      nivel: 1
+      tipo: "candidato"
     }
  
     this.auth.createUser(dados.email, senha.value, dados, dados.nome, "candidato");

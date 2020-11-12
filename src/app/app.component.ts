@@ -85,13 +85,13 @@ userName:any;
 
   ngOnInit() {
 
-    const osDarkness = window.matchMedia('(prefers-color-scheme: dark)');
-    // check the initial state
-    this.applyDarkness(osDarkness);
-    // add listener
-    osDarkness.addListener(e => {
-      this.applyDarkness(e);
-    });
+    // const osDarkness = window.matchMedia('(prefers-color-scheme: dark)');
+    // // check the initial state
+    // this.applyDarkness(osDarkness);
+    // // add listener
+    // osDarkness.addListener(e => {
+    //   this.applyDarkness(e);
+    // });
 
 
     this.statusBar.overlaysWebView(true);
@@ -108,30 +108,30 @@ userName:any;
     console.log(this.userData)
   }
 
-  applyDarkness(matchMediaEvent) {
-    if (matchMediaEvent.matches) {
-      //Tem que troar o false do toggle dps, depende do plano de cor do windows. Apenas dev
-      this.darkMode = true;
-      document.body.classList.toggle('dark', true);
-    } else {
-      this.darkMode = false;
-      document.body.classList.toggle('dark', false);
-    }
-    // this is needed to update the ngModel of the ion-toggle
-    // to avoid the toggle state to become backwards
-    this.ref.detectChanges();
-  }
+  // applyDarkness(matchMediaEvent) {
+  //   if (matchMediaEvent.matches) {
+  //     //Tem que troar o false do toggle dps, depende do plano de cor do windows. Apenas dev
+  //     this.darkMode = true;
+  //     document.body.classList.toggle('dark', true);
+  //   } else {
+  //     this.darkMode = false;
+  //     document.body.classList.toggle('dark', false);
+  //   }
+  //   // this is needed to update the ngModel of the ion-toggle
+  //   // to avoid the toggle state to become backwards
+  //   this.ref.detectChanges();
+  // }
 
-  toggleDarkness() {
-    // this.darkMode = !this.darkMode;
+  // toggleDarkness() {
+  //   // this.darkMode = !this.darkMode;
   
-    console.log(this.darkMode)
-    if (this.darkMode) {
-      document.body.classList.toggle('dark', true);
-    } else {
-      document.body.classList.toggle('dark', false);
-    }
-  }
+  //   console.log(this.darkMode)
+  //   if (this.darkMode) {
+  //     document.body.classList.toggle('dark', true);
+  //   } else {
+  //     document.body.classList.toggle('dark', false);
+  //   }
+  // }
 
 
 

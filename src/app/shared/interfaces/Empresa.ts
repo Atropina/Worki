@@ -10,5 +10,5 @@ export interface Empresa  {
   numero: string,
   complemento: string,
   area: string,
-  nivel: number
+  tipo: string
 }

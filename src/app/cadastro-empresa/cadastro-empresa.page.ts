@@ -41,7 +41,7 @@ export class CadastroEmpresaPage implements OnInit {
       numero: form.value.numero,
       complemento: form.value.complemento,
       area: form.value.area,
-      nivel: 2
+      tipo: "empresa"
     }
     
     this.auth.createUser(data.email, form.value.password, data, data.nomeempresa, "empresas")

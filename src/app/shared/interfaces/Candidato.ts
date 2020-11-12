@@ -11,7 +11,7 @@ export interface Candidatos  {
   cidade: string,
   endereco: string,
   numero: string,
-  nivel: number,
+  tipo: string,
   createdat: string
 }
 

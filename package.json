@@ -4,7 +4,7 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "ionlab": "ionic serve -l",
+    "ionserve": "ionic serve",
     "npmi": "npm i",
     "run": "ionic cordova run android --device",
     "ng": "ng",

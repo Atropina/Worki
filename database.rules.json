@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "users":{
+      ".read": "true",
+    ".write": "true"
+    }
+    
+  }
+}
