@@ -8,12 +8,15 @@ import { map } from 'rxjs/operators'
 import { firestore } from 'firebase';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private userCollection = this.ngFirestore.collection('user')
-  private db = this.ngFirestore;
+
+  private userData: any
+  private db = firestore();
+  private userCollection = this.db.collection('user')
   constructor(
     private ngDatabase: AngularFireDatabase,
     public ngFireAuth: AngularFireAuth,
@@ -23,35 +26,47 @@ export class AuthService {
       user => {
         if (user) {
           localStorage.setItem('user', JSON.stringify(user))
-          this.verificaTipo(JSON.parse(localStorage.getItem("user")).email)
-          
-          //if (JSON.parse(localStorage.getItem("user")).emailVerified) {
-            
 
-          //} else {
-            //user.sendEmailVerification()
-            //this.router.navigate(["verifica-email"])
-          //}
+
+          if (JSON.parse(localStorage.getItem("user")).emailVerified) {
+            if (this.verificaTipo(JSON.parse(localStorage.getItem("user")).email) == "empresa") {
+              this.router.navigate(["inicioemresa"])
+            } else {
+              this.router.navigate(["inicio"])
+            }
+
+          } else {
+            user.sendEmailVerification()
+            this.router.navigate(["verifica-email"])
+          }
         } else {
           localStorage.setItem("user", null);
+          console.log("sem usuario")
         }
       }
     )
   }
 
-  async verificaTipo(email) {
-    
-    await this.db.collection("user").where("uid", "==", email).get().then( (res) =>{
-      res.forEach(doc =>{
-        console.log(doc.id, "=>" , doc.data())
-      } )
-    }).catch( (err) =>[
-      console.log(err)
-    ])
-    
+  verificaTipo(email) {
+
+    this.userCollection.where("email", "==", email).get().then(snapshot => {
+      if (snapshot.empty) {
+        console.log('No matching documents.');
+        return;
+      }
+
+      snapshot.forEach(doc => {
+        this.userData = doc.data();
+
+      });
+      console.log(this.userData.tipo)
+    })
+    return this.userData.tipo
 
 
-   
+
+
+
   }
 
   SignIn(email, password) {
