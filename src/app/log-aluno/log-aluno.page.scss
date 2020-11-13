@@ -1,12 +1,7 @@
-.cardFundo{
-    position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
-  background-color: var(--ion-color-secondary);
-
-}
+ion-content{
+    --ion-background-color: var(--ion-color-secondary);
+  }
+  
 
 .decoracao{
     position: absolute;
@@ -19,10 +14,10 @@
 
 .olaaluno{
  position: absolute;
-width: 248px;
-height: 73px;
+width: 70%;
+
 left: 5%;
-top: 25%;
+top: 15%;
 
 font-family: Noto Sans TC;
 font-style: normal;
@@ -38,27 +33,27 @@ color: #FFFFFF;
 .seuemail{
     --ion-background-color: transparent;
     position: absolute;
-    width: 188px;
+    width: 50%;
     left: 10%;
-    top: 45%;
+    top: 37%;
 }
 
 .suasenha{
     --ion-background-color: transparent;
     position: absolute;
-width: 188px;
+width: 50%;
 left: 10%;
-top: 55%;
+top: 50%;
 
 
 }
 
 .entrar{
     position: absolute;
-width: 248px;
-height: 73px;
-left: 228px;
-top: 467px;
+width: 50%;
+
+left: 65%;
+top: 70%;
 
 font-family: Noto Sans TC;
 font-style: normal;
@@ -66,17 +61,16 @@ font-weight: bold;
 font-size: 30px;
 line-height: 43px;
 letter-spacing: 0.015em;
-
 color: #FFFFFF;
+
 }
 
 .esqueci {
     
 position: absolute;
-width: 144px;
-height: 17px;
-left: 32px;
-top: 569px;
+width: 60%;
+left: 10%;
+top: 89%;
 
 font-family: Noto Sans TC;
 font-style: normal;
@@ -91,10 +85,9 @@ color: #FFFFFF;
 
 .empresa{
     position: absolute;
-width: 143px;
-height: 17px;
-left: 210px;
-top: 569px;
+width: 60%;
+left: 60%;
+top: 89%;
 
 font-family: Noto Sans TC;
 font-style: normal;
@@ -107,28 +100,21 @@ color: #FFFFFF;
 
 }
 
-.email{
+.textologin{
+    
     font-family: Noto Sans TC;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
-line-height: 26px;
-letter-spacing: 0.015em;
-
 color: #FFFFFF;
-
 }
 
-.senha{
-    font-family: Noto Sans TC;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0.015em;
+ion-input{
+    --color: white;
     
-    color: #FFFFFF;
-    
-
 }
+
+
+
+
 ion-item{ --border-color: rgb(255, 255, 255); }

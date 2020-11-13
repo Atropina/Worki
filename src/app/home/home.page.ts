@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonSlides } from '@ionic/angular'
-
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -17,7 +17,9 @@ export class HomePage {
     speed: 1000
   };
 
-  constructor() { }
+  constructor(public menuController: MenuController) { }
 
-
+  ionViewWillEnter(){
+    this.menuController.enable(false);
+  }
 }

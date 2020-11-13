@@ -1,11 +1,15 @@
 <ion-content scroll-y="false" style="overflow-y: hidden">
-  <div class="cardFundo"> </div>
-  <img class="logo" src="../../assets/img/home.png" alt="">
-  <h1 class="bemvindo">Encontre o trabalho dos seus sonhos aqui!</h1>
 
-  <ion-button class="vamosla" [routerLink]="['/question']" expand="block" fill="solid">
+ 
+<ion-item class="hr">
+  <h1 class="bemvindo">Encontre o trabalho dos seus sonhos aqui!</h1>
+</ion-item>
+<ion-item lines="none">
+  <ion-button size="default" slot="end" class="botoes" [routerLink]="['/log-aluno']" expand="block" fill="solid">
     Vamos lá
-  </ion-button>
+  </ion-button> 
+</ion-item>
   
-  
+<img class="logo" src="../../assets/img/home.png" alt="">
+
 </ion-content>

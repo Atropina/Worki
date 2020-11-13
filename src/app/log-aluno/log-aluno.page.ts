@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { auth } from 'firebase';
+import { MenuController } from '@ionic/angular';
 import { Router } from '@angular/router'
 import {AuthService} from '../shared/auth.service'
 import { AlertController, ModalController  } from '@ionic/angular'
@@ -11,14 +12,14 @@ import { AlertController, ModalController  } from '@ionic/angular'
 })
 export class LogAlunoPage implements OnInit {
 
-  constructor( private auth : AuthService, private router : Router, private alert : AlertController, private modalCtrl : ModalController) { }
+  constructor( private auth : AuthService, private router : Router, private alert : AlertController, private modalCtrl : ModalController, public menuController: MenuController) { }
 
   ngOnInit() {
   }
 
     async modalSenha(){
       const modal = await this.modalCtrl.create({
-        component: 'EsqueciSenhaComponent'
+        component: 'app-esqueci-senha'
       })
       return await modal.present()
     }
@@ -63,5 +64,8 @@ export class LogAlunoPage implements OnInit {
 
 
     })
+  }
+  ionViewWillEnter(){
+    this.menuController.enable(false);
   }
 }

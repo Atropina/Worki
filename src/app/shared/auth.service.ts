@@ -28,6 +28,7 @@ export class AuthService {
           localStorage.setItem('user', JSON.stringify(user))
 
 
+
           if (JSON.parse(localStorage.getItem("user")).emailVerified) {
             if (this.verificaTipo(JSON.parse(localStorage.getItem("user")).email) == "empresa") {
               this.router.navigate(["inicioemresa"])
@@ -39,6 +40,7 @@ export class AuthService {
             user.sendEmailVerification()
             this.router.navigate(["verifica-email"])
           }
+
         } else {
           localStorage.setItem("user", null);
           console.log("sem usuario")
@@ -46,6 +48,7 @@ export class AuthService {
       }
     )
   }
+
 
   verificaTipo(email) {
 
@@ -68,6 +71,7 @@ export class AuthService {
 
 
   }
+
 
   SignIn(email, password) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);

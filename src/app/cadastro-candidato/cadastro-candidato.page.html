@@ -46,21 +46,21 @@
    <ion-grid >
      <ion-row>
        <ion-col size="6">
-        <ion-label > PCD? <ion-text color="danger">*</ion-text></ion-label>
-
-        <ion-item lines='none' class="checkOption" > 
-          
-          <ion-checkbox #pcd color='medium'> </ion-checkbox>
-          <span>⠀Sim</span>
+        <ion-label>PCD?</ion-label>
+        <ion-item class="campoForm">
+          <ion-select placeholder="Select One">
+            <ion-select-option value="s">Sim</ion-select-option>
+            <ion-select-option value="">Não</ion-select-option>
+          </ion-select>
         </ion-item>
        </ion-col>
        <ion-col size="6">
-        <ion-label > Empregado? <ion-text color="danger">*</ion-text></ion-label>
-
-        <ion-item lines='none' class="checkOption" > 
-          
-          <ion-checkbox #empregado > </ion-checkbox>
-          <span>⠀Sim</span>
+        <ion-label>Empregado(a)?</ion-label>
+        <ion-item class="campoForm">
+          <ion-select placeholder="Select One">
+            <ion-select-option value="s">Sim</ion-select-option>
+            <ion-select-option value="">Não</ion-select-option>
+          </ion-select>
         </ion-item>
        </ion-col>
      </ion-row>
@@ -110,7 +110,7 @@
     <ion-input required  name="password_confirm" [(ngModel)]="data.password_confirm"   type="password"></ion-input>
   </ion-item>
 
-   <ion-button  block color="warning" [disabled]="data.password != data.password_confirm" type="submit" >
+   <ion-button class="botoes" [disabled]="data.password != data.password_confirm" type="submit" >
      Cadastrar
    </ion-button>
  </form>
