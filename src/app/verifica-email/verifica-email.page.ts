@@ -9,11 +9,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
   styleUrls: ['./verifica-email.page.scss'],
 })
 export class VerificaEmailPage implements OnInit {
-  
+  private email:any
   constructor( private ngAuth : AngularFireAuth) { }
 
   ngOnInit() {
-    
+    this.email = JSON.parse(localStorage.getItem("user")).email
   }
 
 }

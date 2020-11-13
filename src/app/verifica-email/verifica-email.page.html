@@ -6,10 +6,10 @@
 
 <h2 class="h2">
   Enviamos um link mágico
-para seu email (xxx@gmail.com), basta clicar nele para confirmar.
+para seu email {{ email}}, basta clicar nele para confirmar.
 </h2>
 
-<ion-button class="botao1" (click)="onClick()" expand="block" fill='solid' >
+<ion-button class="botao1" [routerLink]="['/inicio']" expand="block" fill='solid' >
   PRONTO, CONFIRMEI!
 </ion-button>
 
