@@ -31,6 +31,7 @@ export class AuthService {
 
           if (JSON.parse(localStorage.getItem("user")).emailVerified) {
             if (this.verificaTipo(JSON.parse(localStorage.getItem("user")).email) == "empresa") {
+              console.log(this.verificaTipo(JSON.parse(localStorage.getItem("user")).email))
               this.router.navigate(["inicioemresa"])
             } else {
               this.router.navigate(["inicio"])

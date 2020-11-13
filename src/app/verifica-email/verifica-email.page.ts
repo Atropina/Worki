@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { MenuController } from '@ionic/angular';
 
 
 
@@ -10,10 +11,14 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class VerificaEmailPage implements OnInit {
   private email:any
-  constructor( private ngAuth : AngularFireAuth) { }
+  
+  constructor( private ngAuth : AngularFireAuth, private menuController : MenuController) { }
 
   ngOnInit() {
     this.email = JSON.parse(localStorage.getItem("user")).email
+  }
+  ionViewWillEnter(){
+    this.menuController.enable(true);
   }
 
 }
