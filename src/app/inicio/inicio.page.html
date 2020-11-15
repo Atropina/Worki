@@ -1,89 +1,104 @@
+<ion-content>
 
-<ion-item  lines="none">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button color="medium" ></ion-menu-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-item>
-
-<ion-content >
-  
-  <ion-item color="secondary" class="hr">
-    <h1 class="olanome">Olá, {{nomeUsuario}}!</h1>
+  <ion-item class="hr">
+    <h1 class="olanome fonte-padrao">Olá, {{nomeUsuario}}!</h1>
   </ion-item>
-  <h1 class="categorias">Categorias</h1>
-  
-    <ion-slides class="slideCategoria" pager="false">
-      <ion-slide>
-        <ion-grid fixed>
-          <ion-row>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-slide>
-      <ion-slide>
-        <ion-grid fixed>
-          <ion-row>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-slide>
-      <ion-slide>
-        <ion-grid fixed>
-          <ion-row>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-slide>
-      <ion-slide>
-        <ion-grid fixed>
-          <ion-row>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-            <ion-col size="3"><categorias></categorias></ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-slide>
-     
-      
-    </ion-slides>
-    
-  <h1 class="vagas">Todas as vagas</h1>
+  <ion-item lines="none">
+    <h1 class="categorias fonte-padrao">Categorias</h1>
+  </ion-item>
 
-  <ion-card div class="vagaculinaria">
-    <img class="vagaimgculinaria" src="../../assets/img/culinaria.png" alt="">
-    <div class="card-titlevaga">Culinária</div>
-    <ion-card-subtitle class="subtitulo">Auxiliar de cozinheiro <hr> Salário: R$ 1,200 <hr> Mais alguma coisa</ion-card-subtitle>
-    <div class="card-subtitle"></div>
-  </ion-card>
-  
+  <ion-slides class="slideCategoria" pager="false">
+    <ion-slide>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+          <ion-col size="3">
+            <categorias></categorias>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
 
 
-<ion-card div class="vagaadministracao" >
-    <img class="vagaimgadministracao" src="../../assets/img/administracao.png" alt="">
-    <div class="card-titlevagaadm">Administração</div>
-    <ion-card-subtitle class="subtitulo">Auxiliar de Administração <hr> Salário: R$ 1,200 <hr> Mais alguma coisa</ion-card-subtitle>
-    <div class="card-subtitle"></div>
-  </ion-card>
+  </ion-slides>
 
+  <ion-item lines="none">
+    <h1 class="vagas fonte-padrao">Todas as vagas</h1>
+  </ion-item>
 
-  <ion-card div class="vagainformatica">
-    <img class="vagaimginformatica" src="../../assets/img/informatica.png" alt="">
-    <div class="card-titlevaga">Informática</div>
-    <ion-card-subtitle class="subtitulo">Auxiliar de informática <hr> Salário: R$ 1,200 <hr> Mais alguma coisa</ion-card-subtitle>
-    <div class="card-subtitle"></div>
-  </ion-card>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+<vaga></vaga>
+
 
 
 

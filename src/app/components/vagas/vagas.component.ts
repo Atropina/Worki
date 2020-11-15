@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-vagas',
+  selector: 'vaga',
   templateUrl: './vagas.component.html',
   styleUrls: ['./vagas.component.scss'],
 })

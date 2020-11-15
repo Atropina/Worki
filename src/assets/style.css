@@ -1,7 +1,7 @@
 .hr{
-  --border-color: rgb(255, 255, 255);
+  --border-color: rgb(255, 255, 255) !important;
   width: 94%;
-  --background: transparent !important;
+  
 
   
 }
@@ -13,4 +13,13 @@
   font-style: normal;
   color:white;
 
+}
+
+.fonte-padrao{
+  color: var(--ion-color-medium); 
+  font-family: Noto Sans TC;
+}
+.fonte-secondary{
+  color: var(--ion-color-secondary);
+  font-family: Noto Sans TC;
 }

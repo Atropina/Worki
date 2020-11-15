@@ -8,6 +8,8 @@ import { InicioPageRoutingModule } from './inicio-routing.module';
 
 import { InicioPage } from './inicio.page';
 import { CategoriasComponent } from '../components/categorias/categorias.component';
+import { HeaderBackComponent } from '../components/header-back/header-back.component';
+import { VagasComponent } from '../components/vagas/vagas.component';
 
 @NgModule({
   imports: [
@@ -16,7 +18,7 @@ import { CategoriasComponent } from '../components/categorias/categorias.compone
     IonicModule,
     InicioPageRoutingModule
   ],
-  entryComponents:[ CategoriasComponent],
-  declarations: [InicioPage,CategoriasComponent]
+  entryComponents:[ CategoriasComponent, HeaderBackComponent, VagasComponent],
+  declarations: [InicioPage,CategoriasComponent, HeaderBackComponent, VagasComponent]
 })
 export class InicioPageModule {}

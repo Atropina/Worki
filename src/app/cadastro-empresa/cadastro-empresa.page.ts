@@ -27,7 +27,7 @@ export class CadastroEmpresaPage implements OnInit {
     this.rua = endereco.logradouro;
     this.uf = endereco.uf
   }
-  submitForm(form){
+  submitForm(form){ 
     
     const data : Empresa = {
       nomeempresa: form.value.nomeEmpresa,

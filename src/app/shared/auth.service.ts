@@ -51,8 +51,8 @@ export class AuthService {
   }
 
 
-  verificaTipo(email) {
-
+  verificaTipo (email) {
+    let data
     this.userCollection.where("email", "==", email).get().then(snapshot => {
       if (snapshot.empty) {
         console.log('No matching documents.');
@@ -63,9 +63,11 @@ export class AuthService {
         this.userData = doc.data();
 
       });
-      console.log(this.userData.tipo)
+      data = this.userData.tipo
+      
     })
-    return this.userData.tipo
+    return data
+    
 
 
 
