@@ -2,31 +2,31 @@
   <ion-item class="hr" > 
   <h1 class="titulo">Publicar nova vaga</h1>
 </ion-item>
-  <form>  
+  <form #f="ngForm" (ngSubmit)="submitForm(f)">  
     <ion-label>Nome da vaga</ion-label>
     <ion-item class="vaga"lines="none">
-      <ion-input name='nomevaga' required  type="text"></ion-input>
+      <ion-input name='nomevaga' ngModel required  type="text"></ion-input>
     </ion-item>
 
     <ion-label>Area de atuação</ion-label>
     <ion-item class="vaga"lines="none">
-      <ion-input name='atuacao' required  type="text"></ion-input>
+      <ion-input name='atuacao'ngModel required  type="text"></ion-input>
     </ion-item>
 
     <ion-label>Descrição da vaga</ion-label>
     <ion-item class="vaga"lines="none">
-      <ion-input name='descricao' required  type="text"></ion-input>
+      <ion-textarea name='descricao' ngModel required  type="text"></ion-textarea>
     </ion-item>
 
 
     <ion-label>Requisitos</ion-label>
     <ion-item class="vaga"lines="none">
-      <ion-textarea></ion-textarea>
+      <ion-textarea name='requisitos' ngModel></ion-textarea>
     </ion-item>
 
     <ion-label>Salário</ion-label>
     <ion-item class="vaga"lines="none">
-      <ion-input name='salario' required  type="text"></ion-input>
+      <ion-input name='salario' ngModel required  type="text"></ion-input>
     </ion-item>
      
     <ion-grid>
@@ -34,13 +34,13 @@
         <ion-col size="6">
          <ion-label>CEP</ion-label>
          <ion-item class="vaga">
-          <ion-input name='cep' required  type="text"></ion-input>
+          <ion-input name='cep' #cep  ngModel (ionInput)="autoCep(cep)" required  type="text"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6">
        <ion-label>Número</ion-label>
        <ion-item class="vaga">
-        <ion-input name='numero' required  type="text"></ion-input>
+        <ion-input name='numero' ngModel required  type="text"></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>
@@ -48,7 +48,7 @@
 
 <ion-label>Complemento</ion-label>
 <ion-item class="vaga"lines="none">
-  <ion-input name='requisitos' required  type="text"></ion-input>
+  <ion-input name='complemento' ngModel required  type="text"></ion-input>
 </ion-item>
 
 
