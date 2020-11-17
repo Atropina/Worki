@@ -15,8 +15,19 @@
   
 
 
-  
+  <ion-item lines="none">
+    <ion-buttons  slot="start">
+      <ion-menu-button color="medium" ></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons  slot="end">
+      <ion-button color="medium" [(routerlink)]="" shape="round">
+        <ion-icon color="primary" slot="end" name="add"></ion-icon>
+        Nova vaga
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
   <ion-item class="hr">
+    
     <h1 class="olanome">Olá, {{empresa}}!</h1>
   </ion-item>
 
