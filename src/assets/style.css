@@ -23,3 +23,13 @@
   color: var(--ion-color-secondary);
   font-family: Noto Sans TC;
 }
+.my-custom-class {
+  --background: var(--ion-color-secondary);
+  --spinner-color: var(--ion-color-primary);
+
+  color: #fff;
+}
+.myClassAlert{
+  --background: var(--ion-color-secondary);
+  color: #fff;
+}
