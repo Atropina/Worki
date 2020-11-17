@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [  
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'publica-vaga',
     pathMatch: 'full'
   },
   {
@@ -49,6 +49,11 @@ const routes: Routes = [
     path: 'cadastro-empresa',
     loadChildren: () => import('./cadastro-empresa/cadastro-empresa.module').then( m => m.CadastroEmpresaPageModule)
   },
+  {
+    path: 'publica-vaga',
+    loadChildren: () => import('./publica-vaga/publica-vaga.module').then( m => m.PublicaVagaPageModule)
+  },
+
 
 
 

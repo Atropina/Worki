@@ -31,15 +31,15 @@ export class AuthService {
 
           if (JSON.parse(localStorage.getItem("user")).emailVerified) {
             if (this.verificaTipo(JSON.parse(localStorage.getItem("user")).email) == "empresa") {
-              console.log(this.verificaTipo(JSON.parse(localStorage.getItem("user")).email))
+             console.log(this.verificaTipo(JSON.parse(localStorage.getItem("user")).email))
               this.router.navigate(["inicioemresa"])
             } else {
-              this.router.navigate(["inicio"])
+              this.router.navigate(["publica-vaga"])
             }
 
           } else {
             user.sendEmailVerification()
-            this.router.navigate(["verifica-email"])
+           this.router.navigate(["verifica-email"])
           }
 
         } else {
