@@ -52,7 +52,11 @@ const routes: Routes = [
   {
     path: 'publica-vaga',
     loadChildren: () => import('./publica-vaga/publica-vaga.module').then( m => m.PublicaVagaPageModule)
+  },  {
+    path: 'esqueciasenha',
+    loadChildren: () => import('./esqueciasenha/esqueciasenha.module').then( m => m.EsqueciasenhaPageModule)
   },
+
 
 
 
