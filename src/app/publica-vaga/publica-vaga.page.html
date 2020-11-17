@@ -1,0 +1,64 @@
+<ion-content>
+  <ion-item class="hr" > 
+  <h1 class="titulo">Publicar nova vaga</h1>
+</ion-item>
+  <form>  
+    <ion-label>Nome da vaga</ion-label>
+    <ion-item class="vaga"lines="none">
+      <ion-input name='nomevaga' required  type="text"></ion-input>
+    </ion-item>
+
+    <ion-label>Area de atuação</ion-label>
+    <ion-item class="vaga"lines="none">
+      <ion-input name='atuacao' required  type="text"></ion-input>
+    </ion-item>
+
+    <ion-label>Descrição da vaga</ion-label>
+    <ion-item class="vaga"lines="none">
+      <ion-input name='descricao' required  type="text"></ion-input>
+    </ion-item>
+
+
+    <ion-label>Requisitos</ion-label>
+    <ion-item class="vaga"lines="none">
+      <ion-textarea></ion-textarea>
+    </ion-item>
+
+    <ion-label>Salário</ion-label>
+    <ion-item class="vaga"lines="none">
+      <ion-input name='salario' required  type="text"></ion-input>
+    </ion-item>
+     
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+         <ion-label>CEP</ion-label>
+         <ion-item class="vaga">
+          <ion-input name='cep' required  type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+       <ion-label>Número</ion-label>
+       <ion-item class="vaga">
+        <ion-input name='numero' required  type="text"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-label>Complemento</ion-label>
+<ion-item class="vaga"lines="none">
+  <ion-input name='requisitos' required  type="text"></ion-input>
+</ion-item>
+
+
+
+
+<ion-button class="botoes" type="submit" >
+  Cadastrar vaga
+</ion-button>
+
+
+
+  </form> 
+</ion-content>

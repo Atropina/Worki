@@ -64,6 +64,11 @@ userName:any;
       icon: 'contact'
     },
    
+    {
+      title: 'publica-vaga',
+      url: '/publica-vaga',
+      icon: 'contact'
+    },
 
 
   ];
