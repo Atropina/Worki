@@ -17,6 +17,7 @@ export class AuthService {
   private userData: any
   private db = firestore();
   private userCollection = this.db.collection('user')
+  dataUserA: firestore.DocumentData;
   constructor(
     private ngDatabase: AngularFireDatabase,
     public ngFireAuth: AngularFireAuth,
@@ -30,11 +31,14 @@ export class AuthService {
 
 
           if (JSON.parse(localStorage.getItem("user")).emailVerified) {
-            if (this.verificaTipo(JSON.parse(localStorage.getItem("user")).email) == "empresa") {
-             console.log(this.verificaTipo(JSON.parse(localStorage.getItem("user")).email))
+
+            let email = JSON.parse(localStorage.getItem("user")).email
+            console.log(this.verificaTipo(email))
+            if (this.verificaTipo(email) == "empresa") {
+              
               this.router.navigate(["inicioemresa"])
             } else {
-              this.router.navigate(["inicioempresa"])
+              this.router.navigate(["inicio"])
             }
 
           } else {
@@ -52,21 +56,22 @@ export class AuthService {
 
 
   verificaTipo (email) {
-    let data
-    this.userCollection.where("email", "==", email).get().then(snapshot => {
+  
+    return this.userCollection.where("email", "==", email).get().then(snapshot => {
       if (snapshot.empty) {
         console.log('No matching documents.');
         return;
       }
 
       snapshot.forEach(doc => {
-        this.userData = doc.data();
+         return this.dataUserA = doc.data()
 
       });
-      data = this.userData.tipo
-      
+      this.dataUserA
+        
     })
-    return data
+    
+    
     
 
 

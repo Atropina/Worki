@@ -88,16 +88,20 @@
     <h1 class="vagas fonte-padrao">Todas as vagas</h1>
   </ion-item>
 
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
-<vaga></vaga>
+  
+  <div class="vagaCard " *ngFor="let vaga of vagas">
+    <img class="vagaimgculinaria" src="../../assets/img/culinaria.png" alt="">
+  
+    <div class="subtitulo fonte-secondary">
+      <h3 class="titulo">{{ vaga.nomeVaga}}</h3>
+      <h5 class="descricao">Salário:{{ vaga.salario }}</h5>
+      <h5 class="descricao">Tipo: Efetivo</h5>
+      <h5 class="descricao">Carga hóraria: 8h</h5>
+     
+    </div>
+    
+  </div>
+
 
 
 

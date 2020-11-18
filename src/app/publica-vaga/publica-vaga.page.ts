@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { from } from 'rxjs';
 import { Vagas} from '../shared/interfaces/Vagas';
 import { VagaService } from '../shared/services/vaga/vaga.service'
@@ -15,7 +16,9 @@ export class PublicaVagaPage implements OnInit {
 
 
   constructor(
-    private vagaService : VagaService
+    private vagaService : VagaService,
+    public loadingController: LoadingController,
+    private alert: AlertController,
   ) { }
   empresaData = JSON.parse(localStorage.getItem("user"));
   private empresa:string
@@ -26,7 +29,17 @@ export class PublicaVagaPage implements OnInit {
     this.empresa = this.empresaData.displayName
     this.empresaUid = this.empresaData.uid
   }
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      cssClass: 'my-custom-class',
+      message: 'Carregando',
+      duration: 2000
+    });
+    await loading.present();
 
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
   async autoCep(cep){
     console.log(cep.value)
     const res = await fetch("https://viacep.com.br/ws/"+cep.value+ "/json/");
@@ -35,12 +48,13 @@ export class PublicaVagaPage implements OnInit {
     this.rua = endereco.logradouro;
     this.uf = endereco.uf
   }
-  submitForm(formData){
+  async submitForm(formData){
+    this.presentLoading()
     const data : Vagas = {
       nomeVaga: formData.value.nomevaga,
       area: formData.value.atuacao,
       descricao: formData.value.descricao,
-      requisitos: formData.value.requisistos,
+      requisitos: formData.value.requisitos,
       cep: formData.value.cep,
       salario: formData.value.salario,
       endereco: this.rua,
@@ -48,8 +62,39 @@ export class PublicaVagaPage implements OnInit {
       empresa: this.empresa,
       uid: this.empresaUid,
     }
+   
+    if(this.vagaService.addVaga(data)){
+      this.loadingController.dismiss()
+      const alertError = await this.alert.create({
+        header: "Sucesso",
+        message: "Vaga cadastrada com sucesso!😁",
+        buttons: [
+          {
+            text: "Ok",
+            role: 'cancel',
+            cssClass: 'myClassAlert'
+          }
+        ]
 
-    this.vagaService.addVaga(data)
+      })
+      await alertError.present()
+    } else{
+      this.loadingController.dismiss()
+      const alertError = await this.alert.create({
+        
+        header: "Erro",
+        message: "Erro ao cadastrar sua vaga, tente novamente mais tarde  😶",
+        buttons: [
+          {
+            text: "Ok",
+            role: 'cancel',
+            cssClass: 'myClassAlert'
+          }
+        ]
+
+      })
+      await alertError.present()
+    }
   }
 
 }

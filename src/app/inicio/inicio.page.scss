@@ -8,3 +8,38 @@ ion-toolbar {
     --ion-toolbar-text-color: white;
 }
 
+.vagaCard{
+    background: var(--ion-color-medium) !important;
+    border-radius: 10px;
+    color: black;
+    width: 95%;
+    margin-left: 2.4%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.67);
+    margin-top: 15px;
+  }
+  .subtitulo{
+    text-align: left;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+    
+  }
+  .descricao{
+    font-size: 12px;
+    margin-top: -2px;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .titulo{
+    font-size: 18px;
+    font-style: bold;
+    margin-top: 3px;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+  }
