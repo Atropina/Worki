@@ -12,8 +12,8 @@ export class VagaService {
 
 
   addVaga(data) {
-    const vagaRef: AngularFirestoreDocument<any> = this.ngFirestore.doc('vagas/');
-    return vagaRef.set(data, { merge: true }).then((res) => {
+    const vagaRef = this.ngFirestore.collection('vagas/');
+    return vagaRef.add(data).then((res) => {
       console.log(res)
     }).catch((err) => {
       console.log(err)

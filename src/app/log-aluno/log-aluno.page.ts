@@ -28,7 +28,7 @@ export class LogAlunoPage implements OnInit {
     const loading = await this.loadingController.create({
       cssClass: 'my-custom-class',
       message: 'Carregando',
-      duration: 10000
+      duration: 2000
     });
     await loading.present();
 
@@ -44,6 +44,7 @@ export class LogAlunoPage implements OnInit {
   logIn(email, password) {
     this.presentLoading()
     this.auth.SignIn(email.value, password.value).then((res) => {
+      console.log(res)
 
     }).catch(async (err) => {
       let msg: string;
