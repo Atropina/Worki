@@ -22,7 +22,7 @@ export class AuthService {
     public ngFireAuth: AngularFireAuth,
     private router: Router,
     private ngFirestore: AngularFirestore) {
-    this.ngFireAuth.authState.subscribe(
+   this.ngFireAuth.authState.subscribe(
       user => {
         if (user) {
           localStorage.setItem('user', JSON.stringify(user))
@@ -34,7 +34,7 @@ export class AuthService {
              console.log(this.verificaTipo(JSON.parse(localStorage.getItem("user")).email))
               this.router.navigate(["inicioemresa"])
             } else {
-              this.router.navigate(["publica-vaga"])
+              this.router.navigate(["inicioempresa"])
             }
 
           } else {
