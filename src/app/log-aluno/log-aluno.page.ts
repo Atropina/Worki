@@ -44,7 +44,7 @@ export class LogAlunoPage implements OnInit {
   logIn(email, password) {
     this.presentLoading()
     this.auth.SignIn(email.value, password.value).then((res) => {
-      console.log(res)
+      this.loadingController.dismiss()
 
     }).catch(async (err) => {
       let msg: string;

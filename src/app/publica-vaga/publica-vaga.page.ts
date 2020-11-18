@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, LoadingController } from '@ionic/angular';
 import { from } from 'rxjs';
-import { Vagas} from '../shared/interfaces/Vagas';
+import { Vagas } from '../shared/interfaces/Vagas';
 import { VagaService } from '../shared/services/vaga/vaga.service'
 
 @Component({
@@ -10,21 +10,21 @@ import { VagaService } from '../shared/services/vaga/vaga.service'
   styleUrls: ['./publica-vaga.page.scss'],
 })
 export class PublicaVagaPage implements OnInit {
-  private cidade:string;
-  private rua:string;
-  private uf:string
+  private cidade: string;
+  private rua: string;
+  private uf: string
 
 
   constructor(
-    private vagaService : VagaService,
+    private vagaService: VagaService,
     public loadingController: LoadingController,
     private alert: AlertController,
   ) { }
   empresaData = JSON.parse(localStorage.getItem("user"));
-  private empresa:string
-  private empresaUid:string
+  private empresa: string
+  private empresaUid: string
 
-  
+
   ngOnInit() {
     this.empresa = this.empresaData.displayName
     this.empresaUid = this.empresaData.uid
@@ -40,17 +40,17 @@ export class PublicaVagaPage implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
   }
-  async autoCep(cep){
+  async autoCep(cep) {
     console.log(cep.value)
-    const res = await fetch("https://viacep.com.br/ws/"+cep.value+ "/json/");
+    const res = await fetch("https://viacep.com.br/ws/" + cep.value + "/json/");
     const endereco = await res.json();
     this.cidade = endereco.localidade;
     this.rua = endereco.logradouro;
     this.uf = endereco.uf
   }
-  async submitForm(formData){
+  async submitForm(formData) {
     this.presentLoading()
-    const data : Vagas = {
+    const data: Vagas = {
       nomeVaga: formData.value.nomevaga,
       area: formData.value.atuacao,
       descricao: formData.value.descricao,
@@ -62,8 +62,8 @@ export class PublicaVagaPage implements OnInit {
       empresa: this.empresa,
       uid: this.empresaUid,
     }
-   
-    if(this.vagaService.addVaga(data)){
+
+    if (this.vagaService.addVaga(data)) {
       this.loadingController.dismiss()
       const alertError = await this.alert.create({
         header: "Sucesso",
@@ -78,10 +78,10 @@ export class PublicaVagaPage implements OnInit {
 
       })
       await alertError.present()
-    } else{
+    } else {
       this.loadingController.dismiss()
       const alertError = await this.alert.create({
-        
+
         header: "Erro",
         message: "Erro ao cadastrar sua vaga, tente novamente mais tarde  😶",
         buttons: [

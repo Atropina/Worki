@@ -1,64 +1,64 @@
 <ion-content>
-  <ion-item class="hr" > 
-  <h1 class="titulo">Publicar nova vaga</h1>
-</ion-item>
-  <form #f="ngForm" (ngSubmit)="submitForm(f)">  
+  <ion-item class="hr">
+    <h1 class="titulo">Publicar nova vaga</h1>
+  </ion-item>
+  <form #f="ngForm" (ngSubmit)="submitForm(f)">
     <ion-label>Nome da vaga</ion-label>
-    <ion-item class="vaga"lines="none">
-      <ion-input name='nomevaga' ngModel required  type="text"></ion-input>
+    <ion-item class="vaga" lines="none">
+      <ion-input name='nomevaga' ngModel required type="text"></ion-input>
     </ion-item>
 
     <ion-label>Area de atuação</ion-label>
-    <ion-item class="vaga"lines="none">
-      <ion-input name='atuacao'ngModel required  type="text"></ion-input>
+    <ion-item class="vaga" lines="none">
+      <ion-input name='atuacao' ngModel required type="text"></ion-input>
     </ion-item>
 
     <ion-label>Descrição da vaga</ion-label>
-    <ion-item class="vaga"lines="none">
-      <ion-textarea name='descricao' ngModel required  type="text"></ion-textarea>
+    <ion-item class="vaga" lines="none">
+      <ion-textarea name='descricao' ngModel required type="text"></ion-textarea>
     </ion-item>
 
 
     <ion-label>Requisitos</ion-label>
-    <ion-item class="vaga"lines="none">
+    <ion-item class="vaga" lines="none">
       <ion-textarea name='requisitos' ngModel></ion-textarea>
     </ion-item>
 
     <ion-label>Salário</ion-label>
-    <ion-item class="vaga"lines="none">
-      <ion-input name='salario' ngModel required  type="text"></ion-input>
+    <ion-item class="vaga" lines="none">
+      <ion-input name='salario' ngModel required type="text"></ion-input>
     </ion-item>
-     
+
     <ion-grid>
       <ion-row>
         <ion-col size="6">
-         <ion-label>CEP</ion-label>
-         <ion-item class="vaga">
-          <ion-input name='cep' #cep  ngModel (ionInput)="autoCep(cep)" required  type="text"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="6">
-       <ion-label>Número</ion-label>
-       <ion-item class="vaga">
-        <ion-input name='numero' ngModel required  type="text"></ion-input>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+          <ion-label>CEP</ion-label>
+          <ion-item class="vaga">
+            <ion-input name='cep' #cep ngModel (ionInput)="autoCep(cep)" required type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label>Número</ion-label>
+          <ion-item class="vaga">
+            <ion-input name='numero' ngModel required type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-<ion-label>Complemento</ion-label>
-<ion-item class="vaga"lines="none">
-  <ion-input name='complemento' ngModel required  type="text"></ion-input>
-</ion-item>
-
-
-
-
-<ion-button class="botoes" type="submit" >
-  Cadastrar vaga
-</ion-button>
+    <ion-label>Complemento</ion-label>
+    <ion-item class="vaga" lines="none">
+      <ion-input name='complemento' ngModel required type="text"></ion-input>
+    </ion-item>
 
 
 
-  </form> 
+
+    <ion-button class="botoes padding" type="submit">
+      Cadastrar vaga
+    </ion-button>
+
+
+
+  </form>
 </ion-content>

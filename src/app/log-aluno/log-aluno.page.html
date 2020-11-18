@@ -1,20 +1,20 @@
 <ion-content>
- 
+
   <img class="decoracao" src="../../assets/img/decoracao.png" alt="">
   <h1 class="olaaluno">Olá, 😃</h1>
-  
-  <ion-item   class="seuemail">
+
+  <ion-item class="seuemail">
     <ion-label class="textologin" position="floating">E-mail</ion-label>
     <ion-input #email></ion-input>
   </ion-item>
 
 
-  <ion-item  class="suasenha">
-    <ion-label type="email" class="textologin"   position="floating">Senha</ion-label>
+  <ion-item class="suasenha">
+    <ion-label type="email" class="textologin" position="floating">Senha</ion-label>
     <ion-input type='password' #password></ion-input>
   </ion-item>
 
-<h1 class="entrar" type="submit"  (click)="logIn(email, password)" >Entrar</h1>
-<h1 class="esqueci" (click)='modalSenha()'>Esqueci minha senha</h1>
-<h1 class="empresa" [routerLink]="['/cadastro-candidato']">Criar uma conta</h1>
+  <h1 class="entrar" type="submit" (click)="logIn(email, password)">Entrar</h1>
+  <h1 class="esqueci" (click)='modalSenha()'>Esqueci minha senha</h1>
+  <h1 class="empresa" [routerLink]="['/cadastro-candidato']">Criar uma conta</h1>
 </ion-content>

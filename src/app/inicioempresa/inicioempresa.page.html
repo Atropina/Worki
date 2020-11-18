@@ -1,4 +1,4 @@
-  <!-- <ion-item class="item" lines="none">
+<!-- <ion-item class="item" lines="none">
     <ion-toolbar>
       <ion-buttons slot="start">
         
@@ -9,20 +9,25 @@
     </ion-toolbar>
   </ion-item> -->
 
-<ion-content >
-  
-  
-  
+<ion-content>
+
+
+
 
 
   <ion-item lines="none">
-    <ion-buttons  slot="start">
-      <ion-menu-button color="medium" ></ion-menu-button>
+    <ion-buttons slot="start">
+      <ion-menu-button color="medium"></ion-menu-button>
     </ion-buttons>
+
+    <ion-button slot="end" [routerLink]="['/publica-vaga']">
+      <ion-icon name="add"></ion-icon>
+      Nova vaga
+    </ion-button>
 
   </ion-item>
   <ion-item class="hr">
-    
+
     <h1 class="olanome">Olá, {{empresa}}!</h1>
   </ion-item>
 

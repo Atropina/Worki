@@ -7,31 +7,31 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class VagaService {
-  
+
   constructor(
     public ngFirestore: AngularFirestore
   ) { }
   private vagaCollection = this.ngFirestore.collection<Vagas>("vagas")
 
-  addVaga(data):boolean {
+  addVaga(data): boolean {
     let res
-    this.vagaCollection.add(data).then( re =>{
+    this.vagaCollection.add(data).then(re => {
       res = true
-    }).catch( err =>{
+    }).catch(err => {
       console.log(err)
       res = true
     })
     return res
   }
 
-  getVagas(){
+  getVagas() {
     return this.vagaCollection.snapshotChanges().pipe(
-      map(actions =>{
-        return actions.map( a => {
+      map(actions => {
+        return actions.map(a => {
           const data = a.payload.doc.data()
           const vagaId = a.payload.doc.id
 
-          return { vagaId, ...data}
+          return { vagaId, ...data }
         })
       })
     )

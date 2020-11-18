@@ -14,7 +14,7 @@ import { firestore } from 'firebase';
 })
 export class AuthService {
 
-  private userData: any
+  private userData
   private db = firestore();
   private userCollection = this.db.collection('user')
   dataUserA: firestore.DocumentData;
@@ -23,27 +23,32 @@ export class AuthService {
     public ngFireAuth: AngularFireAuth,
     private router: Router,
     private ngFirestore: AngularFirestore) {
-   this.ngFireAuth.authState.subscribe(
+    this.ngFireAuth.authState.subscribe(
       user => {
         if (user) {
           localStorage.setItem('user', JSON.stringify(user))
+          let email = JSON.parse(localStorage.getItem("user")).email
 
+          this.userCollection.where("email", "==", email).get().then(res => {
+            res.forEach(doc => {
+              this.dataUserA = doc.data()
 
+            });
+            localStorage.setItem('UserTipo', this.dataUserA.tipo)
+          })
 
           if (JSON.parse(localStorage.getItem("user")).emailVerified) {
 
-            let email = JSON.parse(localStorage.getItem("user")).email
-            console.log(this.verificaTipo(email))
-            if (this.verificaTipo(email) == "empresa") {
-              
-              this.router.navigate(["inicioemresa"])
+            if (localStorage.getItem('UserTipo') == "empresa") {
+
+              this.router.navigate(["inicioempresa"])
             } else {
               this.router.navigate(["inicio"])
             }
 
           } else {
             user.sendEmailVerification()
-           this.router.navigate(["verifica-email"])
+            this.router.navigate(["verifica-email"])
           }
 
         } else {
@@ -54,40 +59,14 @@ export class AuthService {
     )
   }
 
-
-  verificaTipo (email) {
-  
-    return this.userCollection.where("email", "==", email).get().then(snapshot => {
-      if (snapshot.empty) {
-        console.log('No matching documents.');
-        return;
-      }
-
-      snapshot.forEach(doc => {
-         return this.dataUserA = doc.data()
-
-      });
-      this.dataUserA
-        
-    })
-    
-    
-    
-
-
-
-
-
-  }
-
-
   SignIn(email, password) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);
   }
 
   SignOut() {
     return this.ngFireAuth.signOut().then(() => {
-      localStorage.clear()
+      localStorage.removeItem('user')
+      localStorage.removeItem('UserTipo')
     })
   }
 
