@@ -15,6 +15,7 @@
 .fonte-padrao{
   color: var(--ion-color-medium); 
   font-family: Noto Sans TC;
+  margin-left: 10px;
 }
 .fonte-secondary{
   color: var(--ion-color-secondary);

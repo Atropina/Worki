@@ -14,10 +14,6 @@
           </ion-avatar>
           <br>
           <br>
-          <h2>Modo de desenvolvimento</h2>
-          <br>
-          <br>
-
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" lines='none' (click)="debug()" routerDirection="root" [routerLink]="[p.url]"
                detail="false" [class.selected]="selectedIndex == i">
@@ -30,7 +26,9 @@
 
 
 
-
+        <ion-item lines="full">
+          
+        </ion-item>
 
 
         <!-- <ion-list>

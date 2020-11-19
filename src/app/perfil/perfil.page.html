@@ -1,27 +1,28 @@
 <ion-content>
- <div class="cardFundo"> </div>
- <ion-card class="info"> 
-  <ion-card-header>
-    <ion-card-title class="titulo">Núbia Knoll</ion-card-title>
-    <ion-card-subtitle class="subtitulo">{{emailUser}}</ion-card-subtitle>
-  </ion-card-header>
-  <img class="avatar" src="../../assets/img/profile.png" alt="">
-  <ion-searchbar shadows="none" class="pesquisa" placeholder="Buscar vagas"></ion-searchbar>
-</ion-card>  
-<h1 class="suasvagas">Suas vagas</h1>
+
+  <div class="info">
+
+    <ion-avatar class="ion-margin-start">
+      <img src="../../assets/img/candidato.png" alt="">
+    </ion-avatar>
+
+    <div class="subtitulo fonte-padrao">
+      <h3 class="titulo">Núbia Knoll</h3>
+      <h3 class="descricao">Gerente de vendas</h3>
+      <h5 class="descricao">Matutino</h5>
+    </div>
 
 
+  </div>
+  <h1 class="fonte-padrao">Suas vagas</h1>
 
-<ion-card div class="culinaria">
-  <img class="imgculinaria" src="../../assets/img/culinaria.png" alt="">
-  <div class="card-title">Culinária</div>
-  <div class="card-subtitle"></div>
-</ion-card>
-<h1 class="vagassalvas">Vagas salvas</h1>
-<ion-card div class="informatica">
-  <img class="imginformatica" src="../../assets/img/informatica.png" alt="">
-  <div class="card-title">Informática</div>
-  <div class="card-subtitle"></div>
-</ion-card>
+
+  <ion-card class="culinaria" [routerLink]="['/vagasculinaria']">
+    <img class="imgCategoria" src="../../assets/img/culinaria.png" alt="">
+    <div class="card-title">Culinária</div>
+
+  </ion-card>
+
+
 
 </ion-content>
