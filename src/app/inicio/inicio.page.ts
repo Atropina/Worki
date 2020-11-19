@@ -4,6 +4,7 @@ import { AuthService} from '../shared/auth.service'
 import { AngularFireAuth } from '@angular/fire/auth'
 import { VagaService } from '../shared/services/vaga/vaga.service'
 import { Vagas } from '../shared/interfaces/Vagas';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inicio',
@@ -19,7 +20,8 @@ export class InicioPage implements OnInit {
   
   constructor( 
     private auth : AngularFireAuth,
-    private vagaService : VagaService
+    private vagaService : VagaService,
+    public menuController: MenuController
     ) {
       this.VagasSub = vagaService.getVagas().subscribe( data =>{
         this.vagas = data
@@ -37,5 +39,7 @@ export class InicioPage implements OnInit {
   ngOnDestroy(){
     this.VagasSub.unsubscribe()
   }
-
+  ionViewWillEnter(){
+    this.menuController.enable(true);
+  }
 }

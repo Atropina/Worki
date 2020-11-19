@@ -2,6 +2,10 @@
   --border-color: rgb(255, 255, 255) !important;
   width: 94%;
 }
+.hr2{
+  --border-color: rgb(63, 61, 86) !important;
+  width: 94%;
+}
 
 .botoes{
   --background: var(--ion-color-light);

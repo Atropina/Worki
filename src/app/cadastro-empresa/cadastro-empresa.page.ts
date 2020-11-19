@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/auth.service';
 import { Empresa } from "../shared/interfaces/Empresa"
+import { MenuController } from '@ionic/angular';
+
 @Component({
   selector: 'app-cadastro-empresa',
   templateUrl: './cadastro-empresa.page.html',
@@ -14,7 +16,7 @@ export class CadastroEmpresaPage implements OnInit {
     password_confirm: '',
   };
   areas = ['Administração', 'Culinaria', 'TI', 'Desenvolvimento de jogos']
-  constructor( private auth : AuthService) { }
+  constructor( private auth : AuthService, public menuController: MenuController) { }
 
   ngOnInit() {
   }
@@ -47,4 +49,7 @@ export class CadastroEmpresaPage implements OnInit {
     this.auth.createUser(data.email, form.value.password, data, data.nomeempresa, "empresas")
   }
 
+  ionViewWillEnter(){
+    this.menuController.enable(false);
+  }
 }

@@ -17,8 +17,9 @@ export class VerificaEmailPage implements OnInit {
   ngOnInit() {
     this.email = JSON.parse(localStorage.getItem("user")).email
   }
+  
   ionViewWillEnter(){
-    this.menuController.enable(true);
+    this.menuController.enable(false);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-inicioempresa',
@@ -7,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioempresaPage implements OnInit {
 
-  constructor() { }
+  constructor(public menuController: MenuController) { }
   empresaData = JSON.parse(localStorage.getItem("user"));
   empresa:string
   
   ngOnInit() {
     this.empresa = this.empresaData.displayName
   }
-
+  
+  ionViewWillEnter(){
+    this.menuController.enable(true);
+  }
 }

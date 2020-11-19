@@ -1,10 +1,11 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [  
   {
     path: '',
-    redirectTo: 'perfil',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
@@ -50,6 +51,11 @@ const routes: Routes = [
     path: 'esqueciasenha',
     loadChildren: () => import('./esqueciasenha/esqueciasenha.module').then( m => m.EsqueciasenhaPageModule)
   },
+  {
+    path: 'info-vagas',
+    loadChildren: () => import('./info-vagas/info-vagas.module').then( m => m.InfoVagasPageModule)
+
+
 
 
 

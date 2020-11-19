@@ -3,6 +3,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
 import { from } from 'rxjs';
 import { Vagas } from '../shared/interfaces/Vagas';
 import { VagaService } from '../shared/services/vaga/vaga.service'
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-publica-vaga',
@@ -19,6 +20,7 @@ export class PublicaVagaPage implements OnInit {
     private vagaService: VagaService,
     public loadingController: LoadingController,
     private alert: AlertController,
+    public menuController: MenuController
   ) { }
   empresaData = JSON.parse(localStorage.getItem("user"));
   private empresa: string
@@ -96,5 +98,7 @@ export class PublicaVagaPage implements OnInit {
       await alertError.present()
     }
   }
-
+  ionViewWillEnter(){
+    this.menuController.enable(false);
+  }
 }
