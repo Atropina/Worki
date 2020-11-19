@@ -48,10 +48,6 @@ const routes: Routes = [
     loadChildren: () => import('./publica-vaga/publica-vaga.module').then( m => m.PublicaVagaPageModule)
   },
   {
-    path: 'esqueciasenha',
-    loadChildren: () => import('./esqueciasenha/esqueciasenha.module').then( m => m.EsqueciasenhaPageModule)
-  },
-  {
     path: 'info-vagas',
     loadChildren: () => import('./info-vagas/info-vagas.module').then( m => m.InfoVagasPageModule)
   }

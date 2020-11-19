@@ -7,7 +7,6 @@ import { IonicModule } from '@ionic/angular';
 import { InfoVagasPageRoutingModule } from './info-vagas-routing.module';
 
 import { InfoVagasPage } from './info-vagas.page';
-import { HeaderBackComponent } from '../components/header-back/header-back.component';
 
 @NgModule({
   imports: [
@@ -15,8 +14,7 @@ import { HeaderBackComponent } from '../components/header-back/header-back.compo
     FormsModule,
     IonicModule,
     InfoVagasPageRoutingModule
-  ], 
-  entryComponents:[HeaderBackComponent],
-  declarations: [InfoVagasPage, HeaderBackComponent]
+  ],
+  declarations: [InfoVagasPage]
 })
 export class InfoVagasPageModule {}
