@@ -4,31 +4,24 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [  
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'esqueciasenha',
     pathMatch: 'full'
   },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./landing/home.module').then( m => m.HomePageModule)
   },
 
   {
     path: 'log-aluno',
-    loadChildren: () => import('./log-aluno/log-aluno.module').then( m => m.LogAlunoPageModule)
-  },
-  {
-    path: 'log-empresa',
-    loadChildren: () => import('./log-empresa/log-empresa.module').then( m => m.LogEmpresaPageModule)
+    loadChildren: () => import('./loging/log-aluno.module').then( m => m.LogAlunoPageModule)
   },
   
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
-  {
-    path: 'vagasculinaria',
-    loadChildren: () => import('./vagasculinaria/vagasculinaria.module').then( m => m.VagasculinariaPageModule)
-  },
+  
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)

@@ -4,6 +4,8 @@ import { LoadingController, MenuController } from '@ionic/angular';
 import { Router } from '@angular/router'
 import { AuthService } from '../shared/auth.service'
 import { AlertController, ModalController } from '@ionic/angular'
+import {EsqueciSenhaComponent } from '../components/esqueci-senha/esqueci-senha.component'
+
 
 @Component({
   selector: 'app-log-aluno',
@@ -35,12 +37,25 @@ export class LogAlunoPage implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
   }
+
+
   async modalSenha() {
     const modal = await this.modalCtrl.create({
-      component: 'app-esqueci-senha'
+      component: EsqueciSenhaComponent
     })
     return await modal.present()
   }
+
+
+  dismiss() {
+    // using the injected ModalController this page
+    // can "dismiss" itself and optionally pass back data
+    this.modalCtrl.dismiss({
+      'dismissed': true
+    });
+  }
+
+
   logIn(email, password) {
     this.presentLoading()
     this.auth.SignIn(email.value, password.value).then((res) => {

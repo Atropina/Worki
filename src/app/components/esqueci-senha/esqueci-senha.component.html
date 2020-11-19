@@ -1,3 +1,16 @@
-<p>
-  esqueci-senha works!
-</p>
+
+
+
+<ion-content>
+  <h1 class="titulo">Insira seu email abaixo</h1>
+<h2 class="subtitulo">Enviaremos uma redefinição de senha para seu email!</h2>
+<form #f="ngForm" (ngSubmit)="resetPassword(f.value.email)" >
+<ion-item class="vaga"lines="none">
+  <ion-input name='email' ngModel required  type="email"></ion-input>
+</ion-item>
+
+<ion-button class="botoes" type="submit" >
+  Enviar email
+</ion-button>
+</form>
+</ion-content>
