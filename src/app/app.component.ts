@@ -34,41 +34,11 @@ userName:any;
     },
 
     {
-      title: 'Cadastro Empresa',
-      url: '/cadastro-empresa',
-      icon: 'contact'
+      title: 'Perfil',
+      url: '/perfil',
+      icon: 'person'
     },
-    {
-      title: 'Cadastro Candidato',
-      url: '/cadastro-candidato',
-      icon: 'contact'
-    },
-    {
-      title: 'Inicio Empresa',
-      url: '/inicioempresa',
-      icon: 'contact'
-    },
-    {
-      title: 'Login Aluno',
-      url: '/log-aluno',
-      icon: 'contact'
-    },
-    {
-      title: 'Login Empresa',
-      url: '/log-empresa',
-      icon: 'contact'
-    },
-  {
-      title: 'verifica-email',
-      url: '/verifica-email',
-      icon: 'contact'
-    },
-   
-    {
-      title: 'publica-vaga',
-      url: '/publica-vaga',
-      icon: 'contact'
-    },
+
 
 
   ];

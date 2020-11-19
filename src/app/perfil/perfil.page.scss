@@ -1,203 +1,48 @@
-.cardFundo{
-    position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
-  background-color: var(--ion-color-secondary);
-
+ion-content {
+    --ion-background-color: var(--ion-color-secondary) !important;
+    padding: 0;
+    margin: 0;
 }
 
-.info{
-    position: absolute;
-width: 360px;
-height: 202px;
-left: 0px;
-top: 0px;
-background: #57556E;
-border-radius: 20px;
+.info {
+    width: 100vw;
+    background-color: #57556e;
+    height: 250px;
+
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: row;
 }
 
-.titulo{
-    position: absolute;
-width: 142px;
-height: 35px;
-left: 123px;
-top: 46px;
 
-font-family: Noto Sans TC;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 35px;
-/* identical to box height */
 
-letter-spacing: 0.015em;
 
-color: #FFFFFF;
 
-}
 
-.subtitulo{
-    position: absolute;
-    width: 77px;
-    height: 16px;
-    left: 126px;
-    top: 75px;
-    
+.subtitulo {
+    text-align: left;
     font-family: Noto Sans TC;
     font-style: normal;
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 16px;
-    /* identical to box height */
-    
-    text-align: center;
-    letter-spacing: 0.03em;
-    
-    color: #FFFFFF;
-    
-
+    font-weight: normal;
 }
 
-
-.avatar{
-    
-    position: absolute;
-    width: 73px;
-    height: 70px;
-    left: 35px;
-    top: 55px;
-    
-    background: #F1F1F1;
-    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.31);
-    border-radius: 10px;
-
+.descricao {
+    font-size: 15px;
+    margin-top: -2px;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
 }
 
-
-.pesquisa{
-    --ion-background-color: transparent;
-    position: absolute;
-width: 307px;
-height: 34px;
-left: 28px;
-top: 148px;
-
-font-family: Noto Sans TC;
-font-style: normal;
-font-weight: normal;
-font-size: 13px;
-line-height: 19px;
-border: 1px solid white;
-border-radius: 10px;
---box-shadow: none !important;
-
-letter-spacing: 0.015em;
-
-color: #FFFFFF;
-
+.titulo {
+    font-size: 24px;
+    margin-top: 3px;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
 }
 
-.suasvagas{
-    position: absolute;
-width: 97px;
-height: 26px;
-left: 11px;
-top: 216px;
-
-font-family: Noto Sans TC;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 26px;
-/* identical to box height */
-
-letter-spacing: 0.015em;
-
-color: #FFFFFF;
+.ion-margin-start {
+    margin-left: 1%;
+    margin-top: 2%;
 }
-
-.culinaria{
-    background-color: var(--ion-color-medium);
-position: absolute;
-width: 91px;
-height: 126px;
-left: 19px;
-top: 270px;
- 
-box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.67);
-border-radius: 10px;
-}
-
-
-
-.card-title{
-    position: absolute;
-
-left: 17px;
-
-
-font-family: Noto Sans TC;
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 17px;
-letter-spacing: 0.015em;
-
-color: #3F3D56;
-
-}
-
-.imgculinaria{
-
-    position: absolute;
-width: 89px;
-height: 92px;
-left: 4px;
-top: 30px;
-
-}
-
-.vagassalvas{
-    position: absolute;
-width: 313px;
-height: 41px;
-left: 16px;
-top: 431px;
-
-font-family: Noto Sans TC;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 26px;
-letter-spacing: 0.015em;
-
-color: #FFFFFF;
-
-}
-
-.informatica{
-    background-color: var(--ion-color-medium);
-    position: absolute;
-    width: 91px;
-    height: 126px;
-    left: 15px;
-    top: 476px;
-
-    
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.67);
-    border-radius: 10px;
-}
-
-
-.imginformatica{
-
-    position: absolute;
-width: 89px;
-height: 80px;
-left: 0px;
-top: 40px;
-
-}
-
