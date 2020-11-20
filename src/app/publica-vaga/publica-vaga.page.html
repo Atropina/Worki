@@ -8,11 +8,42 @@
       <ion-input name='nomevaga' ngModel required type="text"></ion-input>
     </ion-item>
 
+
     <ion-label>Area de atuação</ion-label>
+
     <ion-item class="vaga" lines="none">
-      <ion-input name='atuacao' ngModel required type="text"></ion-input>
+
+      <ion-select name='area' ngModel ok-text="Okay" cancel-text="Nah">
+        <ion-select-option *ngFor="let a of areas" [value]="a"> {{ a }}</ion-select-option>
+        
+      </ion-select>
     </ion-item>
 
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-label>Tipo da vaga</ion-label>
+          <ion-item class="vaga" lines="none">
+
+            <ion-select ngModel name='tipo' ok-text="Okay" cancel-text="Cancelar">
+              <ion-select-option value="CLT">CLT</ion-select-option>
+              <ion-select-option value="Estágio">Estágio</ion-select-option>
+              <ion-select-option value="Freelancer">Freelancer</ion-select-option>
+              <ion-select-option value="Empresário">Empresário</ion-select-option>
+              <ion-select-option value="Voluntário">Voluntário</ion-select-option>
+              <ion-select-option value="Contratação PJ">Contratação PJ</ion-select-option>
+              <ion-select-option value="Aprendiz">Jovem Aprendiz</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-label>Caarga horária</ion-label>
+          <ion-item class="vaga">
+            <ion-input name='Ch' ngModel required type="number"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
     <ion-label>Descrição da vaga</ion-label>
     <ion-item class="vaga" lines="none">
       <ion-textarea name='descricao' ngModel required type="text"></ion-textarea>
@@ -22,6 +53,11 @@
     <ion-label>Requisitos</ion-label>
     <ion-item class="vaga" lines="none">
       <ion-textarea name='requisitos' ngModel></ion-textarea>
+    </ion-item>
+
+    <ion-label>Experiência</ion-label>
+    <ion-item class="vaga" lines="none">
+      <ion-textarea name='experiencia' ngModel></ion-textarea>
     </ion-item>
 
     <ion-label>Salário</ion-label>
@@ -45,6 +81,7 @@
         </ion-col>
       </ion-row>
     </ion-grid>
+
 
     <ion-label>Complemento</ion-label>
     <ion-item class="vaga" lines="none">

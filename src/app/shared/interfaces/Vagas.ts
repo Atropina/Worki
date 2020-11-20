@@ -8,8 +8,9 @@ export interface Vagas{
   endereco: string,
   complemento: string,
   empresa: string,
-  //tipo: string,
-  //cargaHoraria: string,
+  tipo: string,
+  cargaHoraria: number,
+  experiencia: string,
   uid: string,
   
 

@@ -15,6 +15,8 @@ export class PublicaVagaPage implements OnInit {
   private rua: string;
   private uf: string
 
+  areas = ["Administração", "Gestão de pessoas", "TI", "Gastronomia", "Saúde", "RH", "Manutenção", "Eletrecista", "Educação",
+          "Jurídico", "Imobilíario", "Contabéis", "Cuidado com animais", "Seguraça", "Vendas", "Construção"," Limpeza"]
 
   constructor(
     private vagaService: VagaService,
@@ -54,11 +56,14 @@ export class PublicaVagaPage implements OnInit {
     this.presentLoading()
     const data: Vagas = {
       nomeVaga: formData.value.nomevaga,
-      area: formData.value.atuacao,
+      tipo: formData.value.tipo,
+      area: formData.value.area,
+      cargaHoraria: formData.value.Ch,
       descricao: formData.value.descricao,
       requisitos: formData.value.requisitos,
       cep: formData.value.cep,
       salario: formData.value.salario,
+      experiencia: formData.value.experiencia,
       endereco: this.rua,
       complemento: formData.value.complemento,
       empresa: this.empresa,

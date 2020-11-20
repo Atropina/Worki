@@ -47,3 +47,10 @@ span{
     margin-top: 6%;
     margin-left: 50%;
 }
+ion-select::part(icon) {
+  display: none !important;
+  width: 200px;
+}
+ion-select {
+  min-width: 100% !important;
+}
