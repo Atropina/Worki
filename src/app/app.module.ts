@@ -15,8 +15,8 @@ import {  AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import '../environments/environment';
 import { environment } from '../environments/environment';
-
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 
 
@@ -37,6 +37,8 @@ import { environment } from '../environments/environment';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

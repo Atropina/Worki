@@ -21,14 +21,18 @@ ion-content {
 .info {
     width: 100vw;
     background-color: #57556e;
-    height: 250px;
+    height: 130px;
 
     border-radius: 0 0 20px 20px;
     display: flex;
     flex-direction: row;
 }
 
-
+.info2{
+    margin-left: 10%;
+    margin-top: 10%;
+    font-family: Noto Sans TC;
+}
 
 
 
@@ -61,3 +65,39 @@ ion-content {
     margin-top: 2%;
 }
 
+
+.vagaCard{
+    background: var(--ion-color-medium) !important;
+    border-radius: 10px;
+    color: black;
+    width: 95%;
+    margin-left: 2.4%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.67);
+    margin-top: 15px;
+  }
+  .subtitulo2{
+    text-align: left;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+    
+  }
+  .descricao2{
+    font-size: 12px;
+    margin-top: -2px;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  .titulo2{
+    font-size: 18px;
+    font-style: bold;
+    margin-top: 3px;
+    font-family: Noto Sans TC;
+    font-style: normal;
+    font-weight: normal;
+  }

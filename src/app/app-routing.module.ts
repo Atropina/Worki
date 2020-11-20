@@ -50,7 +50,11 @@ const routes: Routes = [
   {
     path: 'info-vagas',
     loadChildren: () => import('./info-vagas/info-vagas.module').then( m => m.InfoVagasPageModule)
+  },  {
+    path: 'foto-perfil',
+    loadChildren: () => import('./foto-perfil/foto-perfil.module').then( m => m.FotoPerfilPageModule)
   }
+
 
 
 
