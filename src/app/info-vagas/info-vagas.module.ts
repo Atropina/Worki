@@ -16,7 +16,7 @@ import { HeaderBackComponent } from '../components/header-back/header-back.compo
     IonicModule,
     InfoVagasPageRoutingModule
   ], 
-  entryComponents:[HeaderBackComponent],
-  declarations: [InfoVagasPage, HeaderBackComponent]
+  entryComponents:[],
+  declarations: [InfoVagasPage]
 })
 export class InfoVagasPageModule {}

@@ -20,7 +20,9 @@ export class InfoVagasPage implements OnInit {
   ) {
     this.vagaID = this.actvRout.snapshot.params['id'];
     console.log(this.vagaID)
-    if(this.vagaID) this.loadVaga()
+    if(this.vagaID){
+      this.loadVaga()
+    } 
   }
 
   ngOnInit() {
