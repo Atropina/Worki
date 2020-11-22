@@ -36,4 +36,10 @@ export class VagaService {
       })
     )
   }
+
+  getVagasDetails(id :string){
+    
+    return this.vagaCollection.doc<Vagas>(id).valueChanges();
+    
+  }
 }

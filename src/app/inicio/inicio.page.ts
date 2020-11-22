@@ -23,7 +23,7 @@ export class InicioPage implements OnInit {
     private vagaService : VagaService,
     public menuController: MenuController
     ) {
-      this.VagasSub = vagaService.getVagas().subscribe( data =>{
+      this.VagasSub = this.vagaService.getVagas().subscribe( data =>{
         this.vagas = data
       })
      }
@@ -34,6 +34,9 @@ export class InicioPage implements OnInit {
   ngOnInit() {
     
     
+  }
+  vagaDetails(uid){
+
   }
 
   ngOnDestroy(){
