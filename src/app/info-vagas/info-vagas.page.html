@@ -1,8 +1,12 @@
+ 
+<ion-buttons color="medium" slot="start">
+  <ion-back-button defaultHref="inicio"></ion-back-button>
+</ion-buttons>
 
 <ion-content>
   <ion-item class="hr2">
     <ion-label slot="end" class="titulo">
-      <h3>SENAC Joinville</h3>
+      <h3>{{empresaData.nomeempresa}}</h3>
       <p>Ver perfil</p>
     </ion-label>
   <ion-avatar slot="end">
@@ -12,11 +16,11 @@
 <ion-item lines="none"  class="texto">
 <ion-text>
   <p>
-  Tem vaga no SENAC para Webdesigner.
+  Tem vaga na {{ empresaData.nomeempresa}} para {{ vagaData.nomeVaga}}.
     </p>
 
     <p>
-  Afim de fazer parte da nossa equipe e trabalhar em projetos super bacanas para Web?
+  {{ vagaData.descricao}}
 </p>
 
   <p>
@@ -24,28 +28,18 @@
 </p>
 
 <p>
-  Experiência em criação de projetos para Web como sites, landing pages, banners, aplicativos, etc;
-  Photoshop;
-  Adobe XD;
-  UX / UI;
-  Trabalho em Equipe.
+ {{ vagaData.requisitos}}
 </p>
 
-<p>
-  Vaga para home office, trabalho remoto.
-</p>
+
 
 <p>
-  Ao se candidatar, é obrigatório o envio de portfólio com projetos que já tenha criado.
-</p>
-
-<p>
-  Tipo de vaga: Tempo Integral, Meio Período, Freelancer, Efetivo/CLT
+  Tipo de vaga: {{ vagaData.tipo}}
 </p>
 
 <p>
   Experiência:
-  Web Designer (Preferencial)
+  {{ vagaData.experiencia}}
 </p>
 
   <p>

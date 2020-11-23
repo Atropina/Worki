@@ -52,7 +52,7 @@ const routes: Routes = [
     loadChildren: () => import('./esqueciasenha/esqueciasenha.module').then( m => m.EsqueciasenhaPageModule)
   },
   {
-    path: 'info-vagas/:id',
+    path: 'info-vagas',
     loadChildren: () => import('./info-vagas/info-vagas.module').then( m => m.InfoVagasPageModule)
   }
 

@@ -12,7 +12,7 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  private vagas = new Array<Vagas>();
+  private vagas 
   private VagasSub : Subscription
   nomeUsuario = JSON.parse(localStorage.getItem('user')).displayName
   userID = JSON.parse(localStorage.getItem('user')).uid;
@@ -33,11 +33,9 @@ export class InicioPage implements OnInit {
   
   ngOnInit() {
     
-    
+    console.log(this.vagas)
   }
-  vagaDetails(uid){
-
-  }
+  
 
   ngOnDestroy(){
     this.VagasSub.unsubscribe()

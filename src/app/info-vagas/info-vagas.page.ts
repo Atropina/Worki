@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { VagaService } from '.././shared/services/vaga/vaga.service'
+import { EmpresaService } from '.././shared/services/empresa/empresa.service'
 import { Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Vagas } from '../shared/interfaces/Vagas';
 
 
 @Component({
@@ -11,28 +14,43 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./info-vagas.page.scss'],
 })
 export class InfoVagasPage implements OnInit {
-  vagaID
-  private vagatSubscription: Subscription;
+  vagaID:string;
+  empresaID:string
+  vagaSub: Subscription
+  empresaData = {}
+  vagaData = {}
   constructor(
     public menuController: MenuController,
     private vagaService: VagaService,
-    private actvRout: ActivatedRoute
+    private actvRout: ActivatedRoute,
+    private empresaService : EmpresaService
   ) {
-    this.vagaID = this.actvRout.snapshot.params['id'];
-    console.log(this.vagaID)
-    if(this.vagaID){
-      this.loadVaga()
-    } 
+    actvRout.queryParams.subscribe(( q:any) =>{
+      this.vagaID = q['id']
+      this.empresaID = q['empresaid']
+      this.loadVaga(this.vagaID, this.empresaID)
+    })
+    
   }
 
   ngOnInit() {
-
+    console.log(this.vagaData )
   }
-
-  loadVaga(){
-    this.vagatSubscription = this.vagaService.getVagasDetails(this.vagaID).subscribe( data =>{
-      console.log(data)
+  
+   loadVaga(id:string, empresaid:string ) {
+     
+    console.log(empresaid)
+    this.vagaService.getVagasDetails(id).then( res =>{
+      this.vagaData = res.data()
     })
+
+    this.empresaService.getEmpresa(empresaid).then( resE =>{
+      
+      this.empresaData = resE.data()
+      console.log(this.empresaData)
+    })
+    
+
   }
 
   ionViewWillEnter() {
