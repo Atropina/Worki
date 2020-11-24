@@ -1,15 +1,17 @@
  
-<ion-buttons color="medium" slot="start">
-  <ion-back-button defaultHref="inicio"></ion-back-button>
-</ion-buttons>
+<ion-item color="medium" lines='none'>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="inicio"></ion-back-button>
+  </ion-buttons>
+</ion-item>
 
 <ion-content>
   <ion-item class="hr2">
-    <ion-label slot="end" class="titulo">
+    <ion-label  class="titulo">
       <h3>{{empresaData.nomeempresa}}</h3>
       <p>Ver perfil</p>
     </ion-label>
-  <ion-avatar slot="end">
+  <ion-avatar slot="start"> 
     <img src="../../assets/img/candidato.png">
   </ion-avatar>
 </ion-item>

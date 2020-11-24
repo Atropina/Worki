@@ -16,7 +16,8 @@ export class PublicaVagaPage implements OnInit {
   private uf: string
 
   areas = ["Administração", "Gestão de pessoas", "TI", "Gastronomia", "Saúde", "RH", "Manutenção", "Eletrecista", "Educação",
-          "Jurídico", "Imobilíario", "Contabéis", "Cuidado com animais", "Seguraça", "Vendas", "Construção"," Limpeza"]
+          "Jurídico", "Imobilíario", "Contabéis", "Cuidado com animais", "Seguraça", "Vendas", "Construção"," Limpeza",
+          "Manufatura", "Artesanato", "Arquitetura", "Design", "Cobranças", "Marketing" , "Jornalismo" ,""]
 
   constructor(
     private vagaService: VagaService,
