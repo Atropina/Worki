@@ -19,7 +19,7 @@ import { BrMaskerModule } from 'br-mask';
     CadastroEmpresaPageRoutingModule,
      
   ],
-  entryComponents: [HeaderBackComponent],
-  declarations: [CadastroEmpresaPage, HeaderBackComponent]
+  entryComponents: [],
+  declarations: [CadastroEmpresaPage, ]
 })
 export class CadastroEmpresaPageModule {}

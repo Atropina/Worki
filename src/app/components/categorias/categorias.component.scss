@@ -1,15 +1,15 @@
 .card-title{
   
+text-align: center !important;
 
-
-display: flex;
+display: block;
 
 font-family: Noto Sans TC;
 font-style: normal;
-font-weight: 500;
+
 font-size: 12px;
-line-height: 17px;
-letter-spacing: 0.015em;
+
+
 
 color: #3F3D56;
 
@@ -17,14 +17,18 @@ color: #3F3D56;
 
 .imgCategoria{
 
-display: flex;
+display: block;
+width: 95px;
+height: 100px;
 
 
 
 }
 .culinaria{
+  text-align: center !important;
   background-color: var(--ion-color-medium);
 display: grid;
-width: 80px;
+width: 95px;
+height: 120px;
 
 }

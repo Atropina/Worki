@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'categorias',
@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categorias.component.scss'],
 })
 export class CategoriasComponent implements OnInit {
-
+  imgURL
+  @Input() categoria : string
   constructor() { }
 
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.imgURL = "../../assets/img/" + this.categoria + ".png"
+  }
 
 }

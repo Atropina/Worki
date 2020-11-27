@@ -1,6 +1,4 @@
-<app-header-back>
-  
-</app-header-back>
+
 <ion-content>
 
  <form (ngSubmit)="validaForm(nome,cpf, email, nascimento, celular, pcd, empregado, cep, numero, senha)">
@@ -92,7 +90,7 @@
 
    
   <ion-label > Senha <ion-text color="danger">* <span *ngIf="data.password != data.password_confirm" class="error"> Campos devem ser iguais!!! </span> 
-                                                <span *ngIf="6 == data.password.length" class="error">A senha deve conter no minimo 6 caracteres.</span>
+                                              
                       </ion-text>
   </ion-label>
   

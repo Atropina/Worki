@@ -21,7 +21,7 @@ import { BrMaskerModule } from 'br-mask'
     BrMaskerModule
     
   ],
-  entryComponents: [HeaderBackComponent],
-  declarations: [CadastroCandidatoPage, HeaderBackComponent],
+  entryComponents: [],
+  declarations: [CadastroCandidatoPage],
 })
 export class CadastroCandidatoPageModule {}

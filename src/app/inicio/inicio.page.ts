@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { from, Subscription } from 'rxjs';
 import { AuthService} from '../shared/auth.service'
 import { AngularFireAuth } from '@angular/fire/auth'
@@ -13,11 +13,16 @@ import { MenuController } from '@ionic/angular';
 })
 export class InicioPage implements OnInit {
   private vagas 
+  imgURI
+  @Input() area : string
   private VagasSub : Subscription
   nomeUsuario = JSON.parse(localStorage.getItem('user')).displayName
   userID = JSON.parse(localStorage.getItem('user')).uid;
   teste = JSON.parse(localStorage.getItem('user')).emailVerified;
-  
+  areas = ["Administração", "Gestão de pessoas", "TI", "Gastronomia", "Saúde", "RH", "Manutenção", "Eletrecista", "Educação",
+          "Jurídico", "Imobilíario", "Contabéis", "Cuidado com animais", "Seguraça", "Vendas", "Construção"," Limpeza",
+          "Manufatura", "Artesanato", "Arquitetura", "Design", "Cobranças", "Marketing" , "Jornalismo" ,""]
+
   constructor( 
     private auth : AngularFireAuth,
     private vagaService : VagaService,
@@ -34,6 +39,7 @@ export class InicioPage implements OnInit {
   ngOnInit() {
     
     console.log(this.vagas)
+    this.imgURI = "../../assets/img/" + this.area + ".png"
   }
   
 

@@ -7,79 +7,26 @@
     <h1 class="categorias fonte-padrao">Categorias</h1>
   </ion-item>
 
-  <ion-slides class="slideCategoria" pager="false">
+  <ion-slides  class="slideCategoria" pager="false">
     <ion-slide>
       <ion-grid fixed>
         <ion-row>
           <ion-col size="3">
-            <categorias></categorias>
+            <categorias categoria='TI'></categorias>
           </ion-col>
           <ion-col size="3">
-            <categorias></categorias>
+            <categorias categoria='Gastronomia'></categorias>
           </ion-col>
           <ion-col size="3">
-            <categorias></categorias>
+            <categorias categoria='Administração'></categorias>
           </ion-col>
           <ion-col size="3">
-            <categorias></categorias>
+            <categorias categoria='Jurídico'></categorias>
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-slide>
-    <ion-slide>
-      <ion-grid fixed>
-        <ion-row>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-    <ion-slide>
-      <ion-grid fixed>
-        <ion-row>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
-    <ion-slide>
-      <ion-grid fixed>
-        <ion-row>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-          <ion-col size="3">
-            <categorias></categorias>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-slide>
+   
 
 
   </ion-slides>
@@ -90,7 +37,7 @@
 
   
   <div button [routerLink]="['/info-vagas']" [queryParams]="{id: vaga.vagaId, empresaid: vaga.uid}" class="vagaCard " *ngFor="let vaga of vagas">
-    <img class="vagaimgculinaria" src="../../assets/img/culinaria.png" alt="">
+    <img class="vagaimgculinaria" [src]="vaga.img" alt="">
   
     <div class="subtitulo fonte-secondary">
       <h3 class="titulo">{{ vaga.nomeVaga}}</h3>

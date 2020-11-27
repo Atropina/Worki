@@ -11,6 +11,7 @@ export interface Vagas{
   tipo?: string,
   cargaHoraria?: number,
   experiencia?: string,
+  img?: string,
   uid?: string,
   
 

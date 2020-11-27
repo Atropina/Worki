@@ -68,10 +68,11 @@ export class PublicaVagaPage implements OnInit {
       endereco: this.rua,
       complemento: formData.value.complemento,
       empresa: this.empresa,
+      img: "../../assets/img/" + formData.value.area + ".png",
       uid: this.empresaUid,
     }
 
-    if (this.vagaService.addVaga(data)) {
+    this.vagaService.addVaga(data) 
       this.loadingController.dismiss()
       const alertError = await this.alert.create({
         header: "Sucesso",
@@ -86,23 +87,9 @@ export class PublicaVagaPage implements OnInit {
 
       })
       await alertError.present()
-    } else {
-      this.loadingController.dismiss()
-      const alertError = await this.alert.create({
-
-        header: "Erro",
-        message: "Erro ao cadastrar sua vaga, tente novamente mais tarde  😶",
-        buttons: [
-          {
-            text: "Ok",
-            role: 'cancel',
-            cssClass: 'myClassAlert'
-          }
-        ]
-
-      })
-      await alertError.present()
-    }
+    
+      
+    
   }
   ionViewWillEnter(){
     this.menuController.enable(false);

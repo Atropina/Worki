@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'info-vagas',
     loadChildren: () => import('./info-vagas/info-vagas.module').then( m => m.InfoVagasPageModule)
+  },  {
+    path: 'question',
+    loadChildren: () => import('./question/question.module').then( m => m.QuestionPageModule)
   }
+
 
 
 

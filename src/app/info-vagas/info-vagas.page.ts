@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { AlertController, MenuController } from '@ionic/angular';
 import { VagaService } from '.././shared/services/vaga/vaga.service'
 import { EmpresaService } from '.././shared/services/empresa/empresa.service'
 import { Subscription } from 'rxjs';
@@ -23,7 +23,8 @@ export class InfoVagasPage implements OnInit {
     public menuController: MenuController,
     private vagaService: VagaService,
     private actvRout: ActivatedRoute,
-    private empresaService : EmpresaService
+    private empresaService : EmpresaService,
+    private alert: AlertController,
   ) {
     actvRout.queryParams.subscribe(( q:any) =>{
       this.vagaID = q['id']
@@ -51,6 +52,22 @@ export class InfoVagasPage implements OnInit {
     })
     
 
+  }
+  async logSuce(){
+    console.log("oi")
+    const alertError = await this.alert.create({
+      header: "Sucesso",
+      message: "Curriculo enviado com sucesso, fique de olho para os proximo passos. Boa Sorte!😁",
+      buttons: [
+        {
+          text: "Ok",
+          role: 'cancel',
+          cssClass: 'myClassAlert'
+        }
+      ]
+
+    })
+    await alertError.present()
   }
 
   ionViewWillEnter() {
