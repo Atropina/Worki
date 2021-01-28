@@ -17,7 +17,7 @@ Tecnologias usadas:
   - [x] Concepção da ideia
   - [x] Elaboração das telas
   - [x] Documentação
-  - [ ] Codificação das telas | LOADING 99%
-  - [ ] Codificação geral     | LOADING 50%
-  - [ ] Testes
-  - [ ] BUILD🤩😎
+  - [X] Codificação das telas
+  - [X] Codificação geral     
+  - [X] Testes
+  - [X] APROVADO
